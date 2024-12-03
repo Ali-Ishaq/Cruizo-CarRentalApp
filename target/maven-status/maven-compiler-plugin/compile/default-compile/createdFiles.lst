@@ -1,4 +1,7 @@
 com\cruizo\controllers\AuthPageController.class
+com\cruizo\data\CustomersData.class
 com\cruizo\App.class
 module-info.class
+com\cruizo\models\User.class
 com\cruizo\controllers\HomePageController.class
+com\cruizo\controllers\CustomersController.class

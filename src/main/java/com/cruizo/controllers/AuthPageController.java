@@ -73,8 +73,8 @@ private void login(ActionEvent event) throws IOException {
     for (String[] account : accounts) {
         if (account[0].equals(username) && account[1].equals(pwd)) {
             isValid = true;
-            break;
-        }
+            break; 
+       }
     }
 
     // Show appropriate message

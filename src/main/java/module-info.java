@@ -1,4 +1,5 @@
 module com.cruizo {
+    requires javafx.base;
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -8,6 +9,8 @@ module com.cruizo {
     
     
     opens com.cruizo.controllers to javafx.fxml;  // Open controllers for reflection (necessary for FXML)
+    opens com.cruizo.models to javafx.base;
+
     // Ensure you have this if using base modules
     
     // Export the com.cruizo.controllers package to javafx.fxml

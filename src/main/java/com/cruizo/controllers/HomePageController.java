@@ -4,11 +4,15 @@
  */
 package com.cruizo.controllers;
 
+import com.cruizo.App;
+import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
@@ -27,4 +31,9 @@ public class HomePageController implements Initializable {
         // TODO
     }    
     
+    
+    @FXML
+    private void switchToCustomers(ActionEvent event) throws IOException {
+        App.setRoot("Customers");
+    }
 }
