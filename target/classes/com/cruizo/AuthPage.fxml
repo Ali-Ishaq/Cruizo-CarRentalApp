@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="672.0" style="-fx-background-color: #021b24;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projecttest.FXMLDocumentController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="449.0" prefWidth="672.0" style="-fx-background-color: #021b24;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.AuthPageController">
    <left>
       <AnchorPane prefHeight="449.0" prefWidth="264.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
          <children>

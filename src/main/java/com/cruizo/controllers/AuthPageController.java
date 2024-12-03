@@ -1,5 +1,7 @@
-package projecttest;
+package com.cruizo.controllers;
 
+
+import com.cruizo.App;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -19,7 +21,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
-public class FXMLDocumentController implements Initializable {
+public class AuthPageController implements Initializable {
   @FXML
     private ImageView carDealLogo;
 
@@ -77,12 +79,16 @@ private void login(ActionEvent event) throws IOException {
 
     // Show appropriate message
     if (isValid) {
-//        showAlert(Alert.AlertType.INFORMATION, "Success", "Login Successful! Welcome, " + username + "!");
-        root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
-         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-         scene = new Scene(root);
-         stage.setScene(scene);
-         stage.show();
+        showAlert(Alert.AlertType.INFORMATION, "Success", "Login Successful! Welcome, " + username + "!");
+//        root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
+//         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+//         scene = new Scene(root);
+//         stage.setScene(scene);
+//         stage.show();
+
+        App.setRoot("HomePage");
+
+
          
 // Navigate to the next page or perform another action
     } else {

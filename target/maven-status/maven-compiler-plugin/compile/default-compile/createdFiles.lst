@@ -1,4 +1,4 @@
+com\cruizo\controllers\AuthPageController.class
 com\cruizo\App.class
-com\cruizo\controllers\PrimaryController.class
 module-info.class
-com\cruizo\controllers\SecondaryController.class
+com\cruizo\controllers\HomePageController.class

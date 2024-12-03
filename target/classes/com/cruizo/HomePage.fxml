@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="991.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <AnchorPane prefHeight="670.0" prefWidth="216.0" styleClass="left-home" stylesheets="@LeftHome.css" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" radius="14.3975" width="38.59" />
+         </effect></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="670.0" prefWidth="229.0" style="-fx-background-color: #ED682B;" BorderPane.alignment="CENTER">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="0.0" radius="8.2925" width="35.17" />
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="670.0" prefWidth="527.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="198.0" fitWidth="235.0" layoutX="150.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cardeal.png" />
+               </image>
+            </ImageView>
+            <Line endX="182.0" layoutX="268.0" layoutY="305.0" startX="-183.0" />
+            <Line endX="171.0" layoutX="268.0" layoutY="588.0" startX="-160.0" />
+            <Button layoutX="166.0" layoutY="335.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" text="Button" />
+            <Button layoutX="166.0" layoutY="397.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" text="Button" />
+            <Button layoutX="165.0" layoutY="459.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" text="Button" />
+            <Button layoutX="166.0" layoutY="522.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" text="Button" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
