@@ -1,0 +1,15 @@
+#Logout {
+    background-color: #021B24; /* Button's default color */
+    color: white; /* Text color */
+    border: none;
+    border-radius: 5px; /* Optional: for rounded corners */
+/*    padding: 10px 20px;  Padding inside the button */
+
+    cursor: pointer; /* Changes the mouse cursor to a pointer on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+.buttons:hover {
+    background-color: #04303D; /* Slightly lighter color for hover */
+    transform: scale(1.05); /* Slightly enlarges the button */
+}
