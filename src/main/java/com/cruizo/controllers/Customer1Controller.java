@@ -21,7 +21,7 @@ import javafx.scene.control.Button;
 public class Customer1Controller implements Initializable {
     
     @FXML
-    private Button Logout;
+    public Button Logout;
     @FXML
     private TextField firstNameTextField;
 

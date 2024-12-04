@@ -9,6 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.Customer1Controller">
@@ -20,11 +21,17 @@
                   <Image url="@switchwhite.png" />
                </image>
             </ImageView>
-            <Button fx:id="Logout" layoutX="65.0" layoutY="560.0" mnemonicParsing="false" style="-fx-background-color: #021B24;" styleClass="buttons" stylesheets="@ButtonsInCustomer.css" text="Logout" textFill="WHITE">
+            <Button fx:id="Logout" layoutX="68.0" layoutY="556.0" mnemonicParsing="false" onAction="#switchToHomepage" styleClass="buttons" stylesheets="@ButtonsInCustomer.css" text="Logout" textFill="WHITE" />
+            <Button layoutY="70.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" styleClass="buttons" stylesheets="@ButtonsInCustomer.css" text="Home" />
+            <Button layoutY="95.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" styleClass="buttons" stylesheets="@ButtonsInCustomer.css" text="Koi Dusri jaga" />
+            <Button layoutY="120.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" styleClass="buttons" stylesheets="@ButtonsInCustomer.css" text="Koi Teesri Jaga" />
+            <Button layoutY="145.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" styleClass="buttons" stylesheets="@ButtonsInCustomer.css" text="Koi Fourth jaga" />
+            <Label layoutX="38.0" layoutY="22.0" text="Menu" textFill="#ff9d00">
                <font>
-                  <Font name="Calibri Bold" size="12.0" />
+                  <Font name="Calibri Bold" size="31.0" />
                </font>
-            </Button>
+            </Label>
+            <Line endX="32.0" layoutX="109.0" layoutY="62.0" startX="-100.0" stroke="WHITE" />
          </children>
       </AnchorPane>
    </left>

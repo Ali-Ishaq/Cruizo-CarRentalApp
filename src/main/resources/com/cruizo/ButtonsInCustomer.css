@@ -1,15 +1,17 @@
-#Logout {
-    background-color: #021B24; /* Button's default color */
-    color: white; /* Text color */
-    border: none;
-    border-radius: 5px; /* Optional: for rounded corners */
-/*    padding: 10px 20px;  Padding inside the button */
-
-    cursor: pointer; /* Changes the mouse cursor to a pointer on hover */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+.buttons {
+    -fx-background-color: #021B24; /* Button's default color */
+    -fx-text-fill: white; /* Text color */
+    -fx-border-radius: 5; /* Rounded corners */
+    -fx-background-radius: 5; /* Consistent with border radius */
+     /* Padding inside the button */
+    -fx-cursor: hand; /* Pointer cursor on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 0, 2); /* Optional shadow effect */
+    -fx-transition: 0.3s ease-in-out; /* Smooth hover effect (doesn't work exactly like web CSS, but looks nice) */
 }
 
 .buttons:hover {
-    background-color: #04303D; /* Slightly lighter color for hover */
-    transform: scale(1.05); /* Slightly enlarges the button */
+    -fx-background-color: #04303D; /* Hover background color */
+    -fx-scale-x: 1.05; /* Slightly enlarges the button horizontally */
+    -fx-scale-y: 1.05; /* Slightly enlarges the button vertically */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.35), 6, 0, 0, 3); /* Darker shadow on hover */
 }
