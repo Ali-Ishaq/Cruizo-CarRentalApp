@@ -5,7 +5,7 @@
 package com.cruizo.data;
 
 import javafx.collections.ObservableList;
-import com.cruizo.models.User;
+import com.cruizo.models.Customer;
 import javafx.collections.FXCollections;
 
 /**
@@ -25,17 +25,17 @@ public class CustomersData {
     // Declare a private static instance variable
     private static CustomersData instance;
 
-    // Declare your data here, such as User data or any other global data
-    private ObservableList<User> users;
+    // Declare your data here, such as Customer data or any other global data
+    private ObservableList<Customer> users;
     
     // Private constructor to prevent instantiation from outside
     private CustomersData() {
         // Initialize your data
         users = FXCollections.observableArrayList(
-                 new User("Ali","Ishaq",19),
-                new User("Muneeb","Ahsen",19),
-                new User("Abdul","Hadi",19),
-                new User("Ayan","Humayon",19)
+                new Customer("Ali","Ishaq","ali@gmail.com","03324920472","KF235089"),
+                new Customer("Muneeb","Ahsen","muneeb@gmail.com","03328920472","KZ255089"),
+                new Customer("Abdul","Hadi","hadi@gmail.com","03324920572","KS235689"),
+                new Customer("Ayan","Humayon","ayan@gmail.com","03324922472","KR236989")
         );
 
     }
@@ -49,15 +49,15 @@ public class CustomersData {
     }
 
     // Methods to access and modify the data
-    public ObservableList<User> getUsers() {
+    public ObservableList<Customer> getUsers() {
         return users;
     }
 
-    public void addUser(User user) {
+    public void addUser(Customer user) {
         users.add(user);
     }
 
-    public void removeUser(User user) {
+    public void removeUser(Customer user) {
         users.remove(user);
     }
 

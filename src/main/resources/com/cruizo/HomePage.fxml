@@ -36,8 +36,8 @@
             <Line endX="182.0" layoutX="268.0" layoutY="305.0" startX="-183.0" />
             <Line endX="171.0" layoutX="268.0" layoutY="588.0" startX="-160.0" />
             <Button layoutX="166.0" layoutY="335.0" mnemonicParsing="false" onAction="#switchToCustomers" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Customers" />
-            <Button layoutX="166.0" layoutY="397.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Button" />
-            <Button layoutX="165.0" layoutY="459.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Button" />
+            <Button layoutX="166.0" layoutY="397.0" mnemonicParsing="false" onAction="#switchToCars" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Cars" />
+            <Button layoutX="165.0" layoutY="459.0" mnemonicParsing="false" onAction="#switchToCreateBooking" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Create Booking" />
             <Button layoutX="166.0" layoutY="522.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Button" />
          </children>
       </AnchorPane>

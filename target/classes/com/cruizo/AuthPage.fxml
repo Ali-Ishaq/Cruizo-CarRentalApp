@@ -55,9 +55,9 @@
    <center>
       <AnchorPane prefHeight="1086.0" prefWidth="836.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="538.0" fitWidth="449.0" layoutX="30.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="642.0" fitWidth="533.0" layoutX="14.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@CarCutLogin.png" />
+                  <Image url="@porsche%20top1.png" />
                </image>
             </ImageView>
          </children>

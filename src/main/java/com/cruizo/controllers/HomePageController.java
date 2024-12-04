@@ -34,6 +34,15 @@ public class HomePageController implements Initializable {
     
     @FXML
     private void switchToCustomers(ActionEvent event) throws IOException {
-        App.setRoot("Customer1"); // Dusri file ko link krdia hai, frontend banaya tha uska
+        App.setRoot("Customers"); 
+    }
+    
+    @FXML
+    private void switchToCars(ActionEvent event) throws IOException {
+        App.setRoot("Cars"); 
+    }
+    @FXML
+    private void switchToCreateBooking(ActionEvent event) throws IOException {
+        App.setRoot("CreateBooking"); 
     }
 }
