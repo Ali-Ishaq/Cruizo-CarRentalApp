@@ -11,7 +11,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="991.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.HomePageController">
    <left>
-      <AnchorPane prefHeight="670.0" prefWidth="216.0" styleClass="left-home" stylesheets="@LeftHome.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="670.0" prefWidth="216.0" style="-fx-background-color: #021B24;" BorderPane.alignment="CENTER">
          <effect>
             <DropShadow blurType="GAUSSIAN" radius="14.3975" width="38.59" />
          </effect></AnchorPane>
