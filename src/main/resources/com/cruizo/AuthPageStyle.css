@@ -1,0 +1,11 @@
+.auth-page {
+  /* Gradient */
+/* Rounded corners */
+    -fx-background-color: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    
+/*    -fx-background-radius: 5;  Rounded corners 
+   
+    -fx-border-color: transparent;  No border by default 
+    -fx-cursor: hand;  Hand cursor  Shadow */
+}
+
