@@ -1,0 +1,34 @@
+.customer-button {
+    -fx-alignment: center;
+    -fx-background-color: #021B24;
+    -fx-border-width: 0;
+    -fx-border-radius: 20px; /* Rounds the edges of the button */
+    -fx-background-radius: 20px; /* Applies the same rounding to the background */
+    -fx-text-fill: #ffffff;
+    -fx-cursor: hand;
+    -fx-padding: 0 20 0 20; /* top, right, bottom, left */
+    -fx-min-height: 40px;
+    -fx-max-width: 480px;
+    -fx-background-insets: 0;
+    -fx-transition: -fx-background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1), 
+                    -fx-box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1), 
+                    -fx-text-fill 0.167s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customer-button:hover, .button-18:focused {
+/*    -fx-background-color: #0A3138;
+    -fx-text-fill: #ffffff;*/
+ -fx-background-color: #FF8000;
+    -fx-text-fill: #ffffff;
+}
+
+.customer-button:pressed {
+    -fx-background-color: #021B24;
+    -fx-text-fill: #ffffff;
+}
+
+.customer-button:disabled {
+    -fx-cursor: default;
+    -fx-background-color: rgba(0, 0, 0, 0.08);
+    -fx-text-fill: rgba(0, 0, 0, 0.3);
+}

@@ -28,19 +28,19 @@
          <children>
             <TextField fx:id="userNameTextField" layoutX="110.0" layoutY="243.0" />
             <PasswordField fx:id="password" layoutX="110.0" layoutY="299.0" />
-            <Label fx:id="welcomeLabel" layoutX="53.0" layoutY="165.0" text="Welcome To Login Page" textFill="WHITE">
+            <Label fx:id="welcomeLabel" layoutX="47.0" layoutY="157.0" text="Welcome To Login Page" textFill="WHITE">
                <font>
-                  <Font name="Futura Bold" size="23.0" />
+                  <Font name="Calibri Bold" size="29.0" />
                </font>
             </Label>
             <Label layoutX="110.0" layoutY="224.0" text="Username" textFill="#ffbc00">
                <font>
-                  <Font name="Futura Heavy BT" size="12.0" />
+                  <Font name="Calibri Bold" size="12.0" />
                </font>
             </Label>
-            <Label layoutX="109.0" layoutY="279.0" text="Password" textFill="#ffbc00">
+            <Label layoutX="110.0" layoutY="279.0" text="Password" textFill="#ffbc00">
                <font>
-                  <Font name="Futura Heavy BT" size="12.0" />
+                  <Font name="Calibri Bold" size="12.0" />
                </font>
             </Label>
             <Button fx:id="loginButton" layoutX="110.0" layoutY="344.0" mnemonicParsing="false" onAction="#login" prefHeight="24.0" prefWidth="151.0" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Login" textFill="WHITE">

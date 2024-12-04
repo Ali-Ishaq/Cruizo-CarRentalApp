@@ -11,7 +11,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="991.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.HomePageController">
    <left>
-      <AnchorPane prefHeight="670.0" prefWidth="216.0" styleClass="left-home" stylesheets="@LeftHome.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="670.0" prefWidth="216.0" style="-fx-background-color: #021B24;" BorderPane.alignment="CENTER">
          <effect>
             <DropShadow blurType="GAUSSIAN" radius="14.3975" width="38.59" />
          </effect></AnchorPane>
@@ -35,10 +35,10 @@
             </ImageView>
             <Line endX="182.0" layoutX="268.0" layoutY="305.0" startX="-183.0" />
             <Line endX="171.0" layoutX="268.0" layoutY="588.0" startX="-160.0" />
-            <Button layoutX="166.0" layoutY="335.0" mnemonicParsing="false" onAction="#switchToCustomers" prefHeight="37.0" prefWidth="216.0" text="Customers" />
-            <Button layoutX="166.0" layoutY="397.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" text="Button" />
-            <Button layoutX="165.0" layoutY="459.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" text="Button" />
-            <Button layoutX="166.0" layoutY="522.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" text="Button" />
+            <Button layoutX="166.0" layoutY="335.0" mnemonicParsing="false" onAction="#switchToCustomers" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Customers" />
+            <Button layoutX="166.0" layoutY="397.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Button" />
+            <Button layoutX="165.0" layoutY="459.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Button" />
+            <Button layoutX="166.0" layoutY="522.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Button" />
          </children>
       </AnchorPane>
    </center>
