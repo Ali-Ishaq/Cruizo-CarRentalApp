@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -9,39 +10,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.CustomersController">
-   <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@cardeal.png" />
-               </image>
-            </ImageView>
-            <TextField fx:id="firstNameTextField" layoutX="53.0" layoutY="219.0" />
-            <TextField fx:id="LastNameTextField" layoutX="55.0" layoutY="269.0" />
-            <Button layoutX="60.0" layoutY="494.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="148.0" style="-fx-background-radius: 50px;" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Add User" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Button>
-            <Label layoutX="53.0" layoutY="202.0" text="First Name" />
-            <Label layoutX="54.0" layoutY="252.0" text="Last Name" />
-            <TextField fx:id="emailTextField" layoutX="55.0" layoutY="324.0" />
-            <Label layoutX="55.0" layoutY="359.0" text="Phone Number" />
-            <TextField fx:id="phoneNumberTextField" layoutX="53.0" layoutY="376.0" />
-            <TextField fx:id="licenseNumberTextField" layoutX="53.0" layoutY="428.0" />
-            <Label layoutX="54.0" layoutY="307.0" text="Email" />
-            <Label layoutX="54.0" layoutY="411.0" text="License Number" />
-         </children>
-      </AnchorPane>
-   </center>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1080.0" styleClass="auth-page" stylesheets="@AuthPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.CustomersController">
    <right>
-      <AnchorPane prefHeight="600.0" prefWidth="492.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="576.0" prefWidth="429.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="UserTable" layoutX="-138.0" prefHeight="600.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-138.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TableView fx:id="UserTable" layoutX="-187.0" prefHeight="576.0" prefWidth="616.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-187.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
                 <TableColumn fx:id="firstNameColumn" prefWidth="65.0" text="First Name" />
                 <TableColumn fx:id="lastNameColumn" prefWidth="65.0" text="Last Name" />
@@ -56,4 +32,50 @@
          </children>
       </AnchorPane>
    </right>
+   <left>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="469.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="firstNameTextField" layoutX="265.0" layoutY="263.0" />
+            <TextField fx:id="LastNameTextField" layoutX="267.0" layoutY="313.0" />
+            <Button layoutX="267.0" layoutY="529.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="148.0" style="-fx-background-radius: 50px;" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Add User" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="265.0" layoutY="246.0" text="First Name" />
+            <Label layoutX="266.0" layoutY="296.0" text="Last Name" />
+            <TextField fx:id="emailTextField" layoutX="266.0" layoutY="368.0" />
+            <Label layoutX="267.0" layoutY="403.0" text="Phone Number" />
+            <TextField fx:id="phoneNumberTextField" layoutX="265.0" layoutY="420.0" />
+            <TextField fx:id="licenseNumberTextField" layoutX="265.0" layoutY="472.0" />
+            <Label layoutX="266.0" layoutY="351.0" text="Email" />
+            <Label layoutX="266.0" layoutY="455.0" text="License Number" />
+            <Label layoutX="240.0" layoutY="138.0" text="CRUIZO">
+               <font>
+                  <Font name="Jost ExtraBold" size="52.0" />
+               </font>
+            </Label>
+            <Button layoutX="78.0" layoutY="69.0" minHeight="22.0" mnemonicParsing="false" onAction="#switchToHomepage" prefHeight="27.0" prefWidth="92.0" styleClass="buttons" text="Back">
+               <font>
+                  <Font name="Jost Black" size="12.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@CsutomerButton.css" />
+                  <URL value="@ButtonsInCustomer.css" />
+               </stylesheets>
+            </Button>
+            <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="23.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@back-arrow.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="554.0" fitWidth="641.0" layoutX="-423.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@porsche%20front.png" />
+               </image>
+            </ImageView>
+            <Line endX="329.0" layoutX="107.0" layoutY="125.0" startX="-76.0" />
+         </children>
+      </AnchorPane>
+   </left>
 </BorderPane>

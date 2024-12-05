@@ -11,6 +11,6 @@
 
 .button-home:hover {
     -fx-background-color: linear-gradient(to top, #ace0f9 0%, #fff1eb 100%);
-    -fx-cursor: hand; /* Pointer cursor on hover */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 2); /* Glow effect */
+    -fx-cursor: hand;  
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 2);   
 }

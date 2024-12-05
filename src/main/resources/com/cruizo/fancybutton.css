@@ -3,7 +3,7 @@
 /* Rounded corners */
     -fx-background-color: #FF8000; /* Original color */
     
-    -fx-background-radius: 5; /* Rounded corners */
+/*    -fx-background-radius: 5;  Rounded corners */
    
     -fx-border-color: transparent; /* No border by default */
     -fx-cursor: hand; /* Hand cursor *//* Shadow */

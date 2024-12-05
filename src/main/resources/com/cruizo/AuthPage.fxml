@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -11,42 +12,45 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="auth-page" stylesheets="@AuthPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.AuthPageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1080.0" styleClass="auth-page" stylesheets="@AuthPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.AuthPageController">
    <right>
       <AnchorPane minWidth="-Infinity" prefHeight="720.0" prefWidth="387.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="userNameTextField" layoutX="69.0" layoutY="431.0" prefHeight="29.0" prefWidth="214.0" />
-            <PasswordField fx:id="password" layoutX="69.0" layoutY="499.0" prefHeight="29.0" prefWidth="214.0" />
-            <Label fx:id="welcomeLabel" layoutX="40.0" layoutY="210.0" prefHeight="53.0" prefWidth="288.0" text="WELCOME" textFill="#001665">
+            <TextField fx:id="userNameTextField" layoutX="102.0" layoutY="317.0" prefHeight="19.0" prefWidth="181.0" />
+            <PasswordField fx:id="password" layoutX="102.0" layoutY="375.0" prefHeight="24.0" prefWidth="182.0" />
+            <Label fx:id="welcomeLabel" layoutX="76.0" layoutY="146.0" prefHeight="53.0" prefWidth="288.0" text="WELCOME" textFill="#001351">
                <font>
-                  <Font name="Jost SemiBold" size="54.0" />
+                  <Font name="Jost SemiBold" size="48.0" />
                </font>
             </Label>
-            <Label layoutX="68.0" layoutY="402.0" text="Username">
+            <Label layoutX="103.0" layoutY="292.0" text="Username">
                <font>
-                  <Font name="Jost SemiBold" size="18.0" />
+                  <Font name="Jost SemiBold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="70.0" layoutY="471.0" text="Password">
+            <Label layoutX="103.0" layoutY="351.0" text="Password">
                <font>
-                  <Font name="Jost SemiBold" size="18.0" />
+                  <Font name="Jost SemiBold" size="15.0" />
                </font>
             </Label>
-            <Button fx:id="loginButton" layoutX="70.0" layoutY="551.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="211.0" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Login" textFill="WHITE">
+            <Button fx:id="loginButton" layoutX="101.0" layoutY="424.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="183.0" style="-fx-background-radius: 50px;" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Login" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="System Bold" size="15.0" />
                </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </Button>
-            <Line fx:id="lineBelowWelcome" endX="116.0" layoutX="183.0" layoutY="331.0" startX="-113.0" />
-            <Line fx:id="lineAboveWelcome" endX="145.0" layoutX="176.0" layoutY="285.0" startX="-131.0" />
-            <ImageView fx:id="lockIcon" fitHeight="78.0" fitWidth="80.0" layoutX="126.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+            <Line fx:id="lineBelowWelcome" endX="116.0" layoutX="200.0" layoutY="256.0" startX="-113.0" />
+            <Line fx:id="lineAboveWelcome" endX="145.0" layoutX="192.0" layoutY="216.0" startX="-131.0" />
+            <ImageView fx:id="lockIcon" fitHeight="61.0" fitWidth="61.0" layoutX="158.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@LockBlack.png" />
                </image>
             </ImageView>
-            <Label layoutX="68.0" layoutY="285.0" prefHeight="25.0" prefWidth="226.0" text="TO LOGIN PAGE">
+            <Label layoutX="97.0" layoutY="214.0" prefHeight="40.0" prefWidth="224.0" text="TO LOGIN PAGE">
                <font>
-                  <Font name="Jost Light" size="31.0" />
+                  <Font name="Jost Light" size="29.0" />
                </font>
             </Label>
          </children>
@@ -55,7 +59,7 @@
    <center>
       <AnchorPane prefHeight="1086.0" prefWidth="836.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="642.0" fitWidth="533.0" layoutX="14.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="510.0" fitWidth="437.0" layoutX="29.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@porsche%20top1.png" />
                </image>
@@ -66,39 +70,39 @@
    <left>
       <AnchorPane minWidth="-Infinity" prefHeight="722.0" prefWidth="397.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" layoutX="15.0" layoutY="213.0" prefHeight="103.0" prefWidth="380.0" text="CRUIZO">
+            <Label alignment="CENTER" layoutX="8.0" layoutY="176.0" prefHeight="103.0" prefWidth="380.0" text="CRUIZO">
                <font>
                   <Font name="Jost ExtraBold" size="70.0" />
                </font>
             </Label>
-            <Label layoutX="89.0" layoutY="347.0" text="Cruizo is a user-friendly car rental app">
+            <Label layoutX="76.0" layoutY="286.0" text="Cruizo is a user-friendly car rental app">
                <font>
-                  <Font name="Jost Light" size="16.0" />
+                  <Font name="Jost Light" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="80.0" layoutY="379.0" text="designed to make your travel hassle-free.">
+            <Label layoutX="67.0" layoutY="310.0" text="designed to make your travel hassle-free.">
                <font>
-                  <Font name="Jost Light" size="16.0" />
+                  <Font name="Jost Light" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="45.0" layoutY="410.0" text="With a smooth interface and quick booking process">
+            <Label layoutX="32.0" layoutY="334.0" text="With a smooth interface and quick booking process">
                <font>
-                  <Font name="Jost Light" size="16.0" />
+                  <Font name="Jost Light" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="48.0" layoutY="440.0" text="we ensure you get the perfect ride for any journey.">
+            <Label layoutX="36.0" layoutY="360.0" text="we ensure you get the perfect ride for any journey.">
                <font>
-                  <Font name="Jost Light" size="16.0" />
+                  <Font name="Jost Light" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="55.0" layoutY="473.0" text="Explore, book, and drive—all in just a few clicks!">
+            <Label layoutX="43.0" layoutY="385.0" text="Explore, book, and drive—all in just a few clicks!">
                <font>
-                  <Font name="Jost Light" size="16.0" />
+                  <Font name="Jost Light" size="15.0" />
                </font>
             </Label>
-            <Line endX="148.0" layoutX="221.0" layoutY="213.0" startX="-169.0" />
-            <Line endX="148.0" layoutX="215.0" layoutY="316.0" startX="-154.0" />
-            <Line endX="160.0" layoutX="223.0" layoutY="521.0" startX="-177.33334350585938" strokeDashOffset="5.0" />
+            <Line endX="148.0" layoutX="213.0" layoutY="180.0" startX="-169.0" />
+            <Line endX="148.0" layoutX="200.0" layoutY="274.0" startX="-154.0" />
+            <Line endX="142.0" layoutX="210.0" layoutY="428.0" startX="-177.33334350585938" strokeDashOffset="5.0" />
          </children>
       </AnchorPane>
    </left>

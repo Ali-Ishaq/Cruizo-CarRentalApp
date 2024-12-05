@@ -6,24 +6,70 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="auth-page" stylesheets="@AuthPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.HomePageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1080.0" styleClass="auth-page" stylesheets="@AuthPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.HomePageController">
    <left>
-      <AnchorPane prefHeight="720.0" prefWidth="435.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="483.0" prefWidth="491.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="CustomerButton" cache="true" layoutX="144.0" layoutY="207.0" mnemonicParsing="false" onAction="#switchToCustomers" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Customers" />
+            <Button fx:id="CustomerButton" cache="true" layoutX="162.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchToCustomers" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css">
+               <graphic>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Customers" translateX="2.0" translateY="25.0">
+                     <font>
+                        <Font name="Jost Regular" size="15.0" />
+                     </font></Text>
+               </graphic></Button>
 
-            <Button cache="true" layoutX="258.0" layoutY="205.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Existing Booking">
+            <Button cache="true" layoutX="276.0" layoutY="21.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css">
                <opaqueInsets>
                   <Insets />
-               </opaqueInsets></Button>
-            <Button cache="true" layoutX="145.0" layoutY="328.0" mnemonicParsing="false" onAction="#switchToCars" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Available Cars" />
-            <Button cache="true" layoutX="260.0" layoutY="328.0" mnemonicParsing="false" onAction="#switchToCreateBooking" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Create Booking" />
-            <Button layoutX="145.0" layoutY="454.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="221.0" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Button" />
-            <Line endX="100.0" layoutX="334.0" layoutY="101.0" startX="-100.0" />
+               </opaqueInsets>
+               <graphic>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Existing Bookings" textAlignment="CENTER" translateY="25.0" wrappingWidth="70.0">
+                     <font>
+                        <Font name="Jost Regular" size="15.0" />
+                     </font></Text>
+               </graphic></Button>
+            <Button cache="true" layoutX="163.0" layoutY="144.0" mnemonicParsing="false" onAction="#switchToCars" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css">
+               <graphic>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Available Cars" textAlignment="CENTER" translateY="25.0" wrappingWidth="70.0">
+                     <font>
+                        <Font name="Jost Regular" size="15.0" />
+                     </font></Text>
+               </graphic></Button>
+            <Button cache="true" layoutX="278.0" layoutY="144.0" mnemonicParsing="false" onAction="#switchToCreateBooking" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css">
+               <graphic>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Create Booking" textAlignment="CENTER" translateY="25.0" wrappingWidth="70.0">
+                     <font>
+                        <Font name="Jost Regular" size="15.0" />
+                     </font></Text>
+               </graphic></Button>
+            <Button layoutX="163.0" layoutY="270.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="221.0" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" />
+            <ImageView fitHeight="52.0" fitWidth="45.0" layoutX="192.0" layoutY="44.0" onMouseClicked="#switchToCustomers" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Customer.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="55.0" layoutX="189.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Available%20cars.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="47.0" layoutX="307.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@create%20a%20booking.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="47.0" layoutX="304.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@car.png" />
+               </image>
+            </ImageView>
 
          </children>
       </AnchorPane>
@@ -31,19 +77,95 @@
    <right>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="589.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="436.0" fitWidth="1402.0" layoutX="-221.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="380.0" fitWidth="1258.0" layoutX="-97.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@porsche%20side1.png" />
                </image>
             </ImageView>
-            <Line endX="500.0" layoutX="-5.0" layoutY="658.0" startX="-586.6666870117188" />
-            <Text layoutX="-239.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME PAGE">
-               <font>
-                  <Font name="Jost Medium" size="65.0" />
-               </font>
-            </Text>
-            <Line endX="100.0" layoutX="270.0" layoutY="101.0" startX="-100.0" />
          </children>
       </AnchorPane>
    </right>
+   <top>
+      <AnchorPane prefHeight="149.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="353.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME PAGE">
+               <font>
+                  <Font name="Jost Medium" size="55.0" />
+               </font>
+            </Text>
+            <Line endX="100.0" layoutX="820.0" layoutY="72.0" startX="-100.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0" startX="0.38388625592417064" startY="0.37914691943127965">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.11999999731779099" green="0.5746666789054871" blue="1.0" opacity="0.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke></Line>
+            <Line endX="100.0" layoutX="209.0" layoutY="74.0" startX="-100.0">
+               <stroke>
+                  <LinearGradient endX="0.6445497630331753" endY="0.7014218009478673">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color opacity="0.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color opacity="0.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke></Line>
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="93.0" prefWidth="1201.0" BorderPane.alignment="CENTER">
+         <children>
+            <Line endX="481.0" layoutX="594.0" layoutY="62.0" startX="-586.6666870117188">
+               <stroke>
+                  <LinearGradient endX="1.0" startY="0.04265402843601896">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color opacity="0.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color opacity="0.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5036626289081683">
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke></Line>
+         </children>
+      </AnchorPane>
+   </bottom>
 </BorderPane>
