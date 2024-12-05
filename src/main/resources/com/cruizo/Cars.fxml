@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.MotionBlur?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.CarsController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1080.0" styleClass="auth-page" stylesheets="@AuthPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.CarsController">
    <right>
       <AnchorPane prefHeight="600.0" prefWidth="492.0" BorderPane.alignment="CENTER">
          <children>
@@ -31,23 +38,63 @@
       </AnchorPane>
    </right>
    <left>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="446.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="42.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="52.0" layoutX="88.0" layoutY="105.0" strokeDashOffset="50.0" strokeLineCap="ROUND" strokeMiterLimit="100.0" strokeType="INSIDE" width="279.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.27982455492019653" blue="0.5789473652839661" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Rectangle>
+            <ImageView fitHeight="365.0" fitWidth="671.0" focusTraversable="true" layoutX="-125.0" layoutY="239.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@cardeal.png" />
+                  <Image url="@prosche%20view%20new.png" />
                </image>
+               <effect>
+                  <MotionBlur radius="7.04" />
+               </effect>
             </ImageView>
-            <TextField fx:id="makeTextField" layoutX="53.0" layoutY="219.0" promptText="Make" />
-            <TextField fx:id="modelTextField" layoutX="53.0" layoutY="269.0" promptText="Model" />
-            <Button layoutX="60.0" layoutY="494.0" mnemonicParsing="false" onAction="#addCar" prefHeight="25.0" prefWidth="148.0" style="-fx-background-radius: 50px;" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Add Car" textFill="WHITE">
+            <TextField fx:id="makeTextField" layoutX="55.0" layoutY="183.0" promptText="Make" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="modelTextField" layoutX="54.0" layoutY="219.0" promptText="Model" style="-fx-background-radius: 5px;" />
+            <Button layoutX="244.0" layoutY="257.0" mnemonicParsing="false" onAction="#addCar" prefHeight="14.0" prefWidth="148.0" style="-fx-background-radius: 50px;" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Add Car" textFill="WHITE">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font name="Jost SemiBold" size="12.0" />
                </font>
             </Button>
-            <TextField fx:id="registrationTextField" layoutX="53.0" layoutY="376.0" promptText="Registration Number" />
-            <TextField fx:id="priceTextField" layoutX="53.0" layoutY="428.0" promptText="Price per day" />
-            <ComboBox fx:id="categoryComboBox" layoutX="52.0" layoutY="319.0" prefWidth="150.0" promptText="Select a Category" />
+            <TextField fx:id="registrationTextField" layoutX="243.0" layoutY="183.0" promptText="Registration Number" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="priceTextField" layoutX="243.0" layoutY="219.0" promptText="Price per day" style="-fx-background-radius: 5px;" />
+            <ComboBox fx:id="categoryComboBox" layoutX="54.0" layoutY="258.0" prefWidth="150.0" promptText="Select a Category" style="-fx-background-radius: 50 px;" styleClass="buttons" />
+            <Button layoutX="77.0" layoutY="28.0" minHeight="22.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="92.0" styleClass="buttons" text="Back">
+               <font>
+                  <Font name="Jost Black" size="12.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@CsutomerButton.css" />
+                  <URL value="@ButtonsInCustomer.css" />
+               </stylesheets>
+            </Button>
+            <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="20.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@back-arrow.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="106.0" layoutY="107.0" text="Select Your Car">
+               <font>
+                  <Font name="Jost SemiBold" size="33.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </left>
