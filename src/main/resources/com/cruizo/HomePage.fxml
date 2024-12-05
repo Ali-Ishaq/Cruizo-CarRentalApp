@@ -1,44 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="auth-page" stylesheets="@AuthPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.HomePageController">
    <left>
-      <AnchorPane prefHeight="720.0" prefWidth="408.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="720.0" prefWidth="435.0" BorderPane.alignment="CENTER">
          <children>
-<<<<<<< Updated upstream
-            <ImageView fitHeight="198.0" fitWidth="235.0" layoutX="150.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@cardeal.png" />
-               </image>
-            </ImageView>
-            <Line endX="182.0" layoutX="268.0" layoutY="305.0" startX="-183.0" />
-            <Line endX="171.0" layoutX="268.0" layoutY="588.0" startX="-160.0" />
-            <Button layoutX="166.0" layoutY="335.0" mnemonicParsing="false" onAction="#switchToCustomers" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Customers" />
-            <Button layoutX="166.0" layoutY="397.0" mnemonicParsing="false" onAction="#switchToCars" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Cars" />
-            <Button layoutX="165.0" layoutY="459.0" mnemonicParsing="false" onAction="#switchToCreateBooking" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Create Booking" />
-            <Button layoutX="166.0" layoutY="522.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="216.0" styleClass="customer-button" stylesheets="@CsutomerButton.css" text="Button" />
-=======
-            <Button layoutX="312.0" layoutY="264.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Button" />
-            <Button layoutX="196.0" layoutY="264.0" mnemonicParsing="false" onAction="#switchToCustomers" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Customer" />
-            <Button layoutX="196.0" layoutY="386.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Button" />
-            <Button layoutX="312.0" layoutY="386.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Button" />
->>>>>>> Stashed changes
+            <Button fx:id="CustomerButton" cache="true" layoutX="144.0" layoutY="207.0" mnemonicParsing="false" onAction="#switchToCustomers" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Customers" />
+
+            <Button cache="true" layoutX="258.0" layoutY="205.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Existing Booking">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Button>
+            <Button cache="true" layoutX="145.0" layoutY="328.0" mnemonicParsing="false" onAction="#switchToCars" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Available Cars" />
+            <Button cache="true" layoutX="260.0" layoutY="328.0" mnemonicParsing="false" onAction="#switchToCreateBooking" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Create Booking" />
+            <Button layoutX="145.0" layoutY="454.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="221.0" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" text="Button" />
+            <Line endX="100.0" layoutX="334.0" layoutY="101.0" startX="-100.0" />
+
          </children>
       </AnchorPane>
    </left>
    <right>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="589.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="295.0" fitWidth="984.0" layoutX="-116.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="436.0" fitWidth="1402.0" layoutX="-221.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@prosche%20side.png" />
+                  <Image url="@porsche%20side1.png" />
                </image>
             </ImageView>
+            <Line endX="500.0" layoutX="-5.0" layoutY="658.0" startX="-586.6666870117188" />
+            <Text layoutX="-239.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HOME PAGE">
+               <font>
+                  <Font name="Jost Medium" size="65.0" />
+               </font>
+            </Text>
+            <Line endX="100.0" layoutX="270.0" layoutY="101.0" startX="-100.0" />
          </children>
       </AnchorPane>
    </right>

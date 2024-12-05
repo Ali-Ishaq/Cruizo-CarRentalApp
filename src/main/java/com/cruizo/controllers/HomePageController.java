@@ -14,6 +14,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 /**
@@ -23,6 +24,8 @@ import javafx.scene.control.Label;
  */
 public class HomePageController implements Initializable {
     private Label labelTest;
+    @FXML 
+    private Button CustomerButton;
     /**
      * Initializes the controller class.
      */
@@ -34,6 +37,7 @@ public class HomePageController implements Initializable {
     
     @FXML
     private void switchToCustomers(ActionEvent event) throws IOException {
+        
         App.setRoot("Customers"); 
     }
     
