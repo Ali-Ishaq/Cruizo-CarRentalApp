@@ -10,13 +10,32 @@
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1080.0" styleClass="auth-page" stylesheets="@AuthPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.HomePageController">
    <left>
-      <AnchorPane prefHeight="483.0" prefWidth="491.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="483.0" prefWidth="491.0" style="-fx-background-radius: 60px;" BorderPane.alignment="CENTER">
          <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="369.0" layoutX="147.0" layoutY="12.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="INSIDE" style="fx-background-radius: 50px;" width="254.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="0.7488151658767773" startX="0.9905213270142179">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Rectangle>
             <Button fx:id="CustomerButton" cache="true" layoutX="162.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchToCustomers" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css">
                <graphic>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Customers" translateX="2.0" translateY="25.0">
@@ -49,7 +68,14 @@
                         <Font name="Jost Regular" size="15.0" />
                      </font></Text>
                </graphic></Button>
-            <Button layoutX="163.0" layoutY="270.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="221.0" styleClass="button-home" stylesheets="@ButtonsInHomePage.css" />
+            <Button layoutX="163.0" layoutY="270.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="221.0" styleClass="button-home" stylesheets="@ButtonsInHomePage.css">
+               <graphic>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" translateX="27.0" wrappingWidth="97.1796875">
+                     <font>
+                        <Font name="Jost Regular" size="32.0" />
+                     </font>
+                  </Text>
+               </graphic></Button>
             <ImageView fitHeight="52.0" fitWidth="45.0" layoutX="192.0" layoutY="44.0" onMouseClicked="#switchToCustomers" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Customer.png" />
@@ -68,6 +94,11 @@
             <ImageView fitHeight="51.0" fitWidth="47.0" layoutX="304.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@car.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="48.0" layoutX="197.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@power-off.png" />
                </image>
             </ImageView>
 
