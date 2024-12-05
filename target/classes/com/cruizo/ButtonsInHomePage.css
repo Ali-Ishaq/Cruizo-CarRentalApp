@@ -1,0 +1,16 @@
+.button-home {
+-fx-background-color: rgba(255, 255, 255, 0.4);
+    -fx-text-fill: #333;   
+    -fx-font-size: 16px; /*
+    /*-fx-padding: 10 20;  Adjust padding for larger buttons */
+    -fx-border-radius: 10; /* Rounded corners */
+    -fx-background-radius: 10; /* Match border and background radius */
+    -fx-border-color: #ace0f9; /* Optional border color */
+    -fx-border-width: 1; /* Thin border for a neat look */
+}
+
+.button-home:hover {
+    -fx-background-color: linear-gradient(to top, #ace0f9 0%, #fff1eb 100%);
+    -fx-cursor: hand; /* Pointer cursor on hover */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 2); /* Glow effect */
+}
