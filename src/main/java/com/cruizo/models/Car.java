@@ -9,11 +9,11 @@ package com.cruizo.models;
  * @author ALI
  */
 public class Car {
-    String make;
-    String model;
-    String category;
-    String registrationNumber;
-    Double pricePerDay;
+    public String make;
+    public String model;
+    public String category;
+    public String registrationNumber;
+    public Double pricePerDay;
 
     public Car(String make, String model, String category, String registrationNumber, Double pricePerDay) {
         this.make = make;

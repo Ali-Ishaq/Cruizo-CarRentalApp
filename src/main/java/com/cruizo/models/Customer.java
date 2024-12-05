@@ -14,6 +14,7 @@ public class Customer {
     public String email;
     public String phoneNumber;
     public String licenseNumber;
+    public String fullname;
 
     public Customer(String firstName, String lastName, String email, String phoneNumber, String licenseNumber) {
         this.firstName = firstName;
@@ -21,6 +22,7 @@ public class Customer {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.licenseNumber = licenseNumber;
+        this.fullname = firstName+" "+lastName;
     }
 
     public String getFirstName() {
@@ -41,6 +43,9 @@ public class Customer {
 
     public String getLicenseNumber() {
         return licenseNumber;
+    }
+    public String getFullName() {
+        return fullname;
     }
         
     

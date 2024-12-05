@@ -1,5 +1,6 @@
 package com.cruizo.controllers;
 
+import com.cruizo.App;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -14,6 +15,7 @@ import javafx.scene.control.ComboBox;
 import com.cruizo.data.CarsData;
 import com.cruizo.data.CustomersData;
 import com.cruizo.models.Customer;
+import java.io.IOException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -81,20 +83,20 @@ public class CarsController implements Initializable {
         
          String make = makeTextField.getText();
         String model = modelTextField.getText();
-        String category = categoryComboBox.getValue();
         String registrationNumber = registrationTextField.getText();
         String priceStr = priceTextField.getText();
+        String category = categoryComboBox.getValue();
         Double price;
 
 
         // Validate inputs
-        if (make.isEmpty() || model.isEmpty() || category.isEmpty() || registrationNumber.isEmpty() || priceStr.isEmpty()) {
+        if (make.isEmpty() || model.isEmpty() || registrationNumber.isEmpty() || priceStr.isEmpty()|| category== null ){
             System.out.println("Error: All fields are required!");
             return;
         }
         
         try {
-            price=Double.parseDouble(priceStr);
+            price=Double.parseDouble(priceStr);   
         } catch (NumberFormatException e) {
             System.out.println("Inalid Amount");
             return;
@@ -102,6 +104,10 @@ public class CarsController implements Initializable {
 
 
         CarsData.getInstance().addCar(new Car(make, model, category, registrationNumber, price));
+    }
+    
+    public void switchToHomepage() throws IOException {
+        App.setRoot("HomePage");
     }
     
     

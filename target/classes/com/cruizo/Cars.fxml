@@ -76,7 +76,7 @@
             <TextField fx:id="registrationTextField" layoutX="243.0" layoutY="183.0" promptText="Registration Number" style="-fx-background-radius: 5px;" />
             <TextField fx:id="priceTextField" layoutX="243.0" layoutY="219.0" promptText="Price per day" style="-fx-background-radius: 5px;" />
             <ComboBox fx:id="categoryComboBox" layoutX="54.0" layoutY="258.0" prefWidth="150.0" promptText="Select a Category" style="-fx-background-radius: 50 px;" styleClass="buttons" />
-            <Button layoutX="77.0" layoutY="28.0" minHeight="22.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="92.0" styleClass="buttons" text="Back">
+            <Button layoutX="77.0" layoutY="28.0" minHeight="22.0" mnemonicParsing="false" onAction="#switchToHomepage" prefHeight="27.0" prefWidth="92.0" styleClass="buttons" text="Back">
                <font>
                   <Font name="Jost Black" size="12.0" />
                </font>
