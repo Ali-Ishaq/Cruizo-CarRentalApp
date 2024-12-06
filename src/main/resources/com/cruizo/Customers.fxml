@@ -17,7 +17,7 @@
    <right>
       <AnchorPane prefHeight="576.0" prefWidth="429.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="UserTable" layoutX="-187.0" prefHeight="576.0" prefWidth="616.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-187.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TableView fx:id="UserTable" layoutX="-187.0" prefHeight="576.0" prefWidth="616.0" stylesheets="@tableViewStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-187.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
                 <TableColumn fx:id="firstNameColumn" prefWidth="65.0" text="First Name" />
                 <TableColumn fx:id="lastNameColumn" prefWidth="65.0" text="Last Name" />

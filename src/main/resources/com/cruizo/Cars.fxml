@@ -22,7 +22,7 @@
    <right>
       <AnchorPane prefHeight="600.0" prefWidth="492.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="CarTable" layoutX="-138.0" prefHeight="600.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-138.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TableView fx:id="CarTable" layoutX="-138.0" prefHeight="600.0" prefWidth="630.0" stylesheets="@tableViewStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-138.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
                 <TableColumn fx:id="makeColumn" prefWidth="65.0" text="Make" />
                 <TableColumn fx:id="modelColumn" prefWidth="65.0" text="Model" />

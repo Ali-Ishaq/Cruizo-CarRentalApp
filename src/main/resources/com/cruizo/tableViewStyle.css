@@ -1,0 +1,58 @@
+/* TableView Background and Borders */
+.table-view {
+/*    -fx-background-color: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);*/
+    -fx-background-color: rgba(255, 255, 255,1);
+    -fx-border-color: #a0c4ff;
+    -fx-border-width: 2px;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 2, 2);
+}
+
+/* Table Header Row */
+.table-view .column-header {
+    -fx-background-color: linear-gradient(to bottom, #ace0f9 0%, #d4f1f9 100%);
+    -fx-border-color: #a0c4ff;
+    -fx-border-width: 0 0 2px 0;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-alignment: center;
+}
+
+/* Table Header Text */
+.table-view .column-header .label {
+    -fx-font-size: 14px;
+    -fx-font-family: "Jost SemiBold";
+    -fx-text-fill: #005f73;
+}
+
+/* Table Rows */
+.table-view .table-row-cell {
+    -fx-background-color: transparent;
+    -fx-alternate-row-fill-visible: true;
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: linear-gradient(to bottom, #f0faff, #e8f4fa);
+}
+
+.table-view .table-row-cell:even {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #eef6fb);
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #d4f1f9;
+}
+
+/* Table Cells */
+.table-view .cell {
+    -fx-padding: 8px;
+    -fx-font-size: 13px;
+    -fx-font-family: "Jost";
+    -fx-text-fill: #333;
+}
+
+/* Selected Cell */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #86cce9;
+    -fx-text-fill: white;
+}
