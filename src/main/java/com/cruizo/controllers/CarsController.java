@@ -51,6 +51,9 @@ public class CarsController implements Initializable {
 
     @FXML
     private TableColumn<Car, String> registrationColumn;
+    
+    @FXML
+    private TableColumn<Car, String> statusColumn;
 
     @FXML
     private TextField registrationTextField;
@@ -75,6 +78,7 @@ public class CarsController implements Initializable {
         categoryColumn.setCellValueFactory(new PropertyValueFactory<Car, String>("category"));
         registrationColumn.setCellValueFactory(new PropertyValueFactory<Car, String>("registrationNumber"));
         priceColumn.setCellValueFactory(new PropertyValueFactory<Car, Double>("pricePerDay"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<Car, String>("status"));
 
     }
 

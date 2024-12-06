@@ -44,7 +44,7 @@
                      </font></Text>
                </graphic></Button>
 
-            <Button cache="true" layoutX="276.0" layoutY="21.0" mnemonicParsing="false" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css">
+            <Button cache="true" layoutX="276.0" layoutY="21.0" mnemonicParsing="false" onAction="#switchToExistingBookings" prefHeight="113.0" prefWidth="105.0" style="-fx-background-radius: 10px;" styleClass="button-home" stylesheets="@ButtonsInHomePage.css">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -68,7 +68,7 @@
                         <Font name="Jost Regular" size="15.0" />
                      </font></Text>
                </graphic></Button>
-            <Button layoutX="163.0" layoutY="270.0" mnemonicParsing="false" prefHeight="99.0" prefWidth="221.0" styleClass="button-home" stylesheets="@ButtonsInHomePage.css">
+            <Button layoutX="163.0" layoutY="270.0" mnemonicParsing="false" onAction="#switchToAuthPage" prefHeight="99.0" prefWidth="221.0" styleClass="button-home" stylesheets="@ButtonsInHomePage.css">
                <graphic>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Logout" translateX="27.0" wrappingWidth="97.1796875">
                      <font>

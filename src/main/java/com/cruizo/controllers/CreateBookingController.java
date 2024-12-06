@@ -5,11 +5,13 @@
 package com.cruizo.controllers;
 
 import com.cruizo.App;
+import com.cruizo.data.BookingsData;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import com.cruizo.data.CustomersData;
 import com.cruizo.data.CarsData;
+import com.cruizo.models.Booking;
 import com.cruizo.models.Car;
 import com.cruizo.models.Customer;
 import java.io.IOException;
@@ -87,12 +89,26 @@ public class CreateBookingController implements Initializable {
 
     ObservableList<Customer> customersList;
     ObservableList<Car> carsList;
+    
+    private Customer selectedCustomer;
+    private Car selectedCar;
+    
+    private Double calculatedRentalAmount;
 
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
         customersList = FXCollections.observableArrayList(CustomersData.getInstance().getUsers());
         carsList = FXCollections.observableArrayList(CarsData.getInstance().getCars());
+        
+        // Filtering out rented Cars
+        carsList.setAll(
+                        CarsData.getInstance().getCars().stream()
+                        .filter(x -> x.status.equals("Available"))
+                        .collect(Collectors.toList())
+        );
 
         // Initializing Customer Table    
         CustomerTable.setItems(customersList);
@@ -168,36 +184,33 @@ public class CreateBookingController implements Initializable {
 
     
      
-    private boolean selectCustomer(){
+    public void selectCustomer(){
         
-        Customer selectedCustomer=CustomerTable.getSelectionModel().getSelectedItem();
-        System.out.println("heyyyyyy ff");
-        
+        Customer selectedCustomer=CustomerTable.getSelectionModel().getSelectedItem();        
         if(selectedCustomer !=null ){
-               
-            selectedCustomerListView.getItems().setAll(selectedCustomer.fullname,selectedCustomer.phoneNumber,selectedCustomer.email,selectedCustomer.licenseNumber);
-            return true;
-        
+            this.selectedCustomer= selectedCustomer;
+            selectedCustomerListView.getItems().setAll(this.selectedCustomer.fullname,this.selectedCustomer.phoneNumber,this.selectedCustomer.email,this.selectedCustomer.licenseNumber);        
+            calculateBookingAmount();
         }
-        return false;
+        
             
     }
     
-    private Car selectCar(){
+    public void selectCar(){
         
         Car selectedCar=CarTable.getSelectionModel().getSelectedItem();
         
         if(selectedCar !=null ){
-                selectedCarListView.getItems().setAll(selectedCar.make,selectedCar.model,selectedCar.category,selectedCar.registrationNumber);
-                
+            
+                this.selectedCar=selectedCar;
+                selectedCarListView.getItems().setAll(this.selectedCar.make,this.selectedCar.model,this.selectedCar.category,this.selectedCar.registrationNumber);
+                calculateBookingAmount();
         }
-        return selectedCar;
             
     }
    
-     //    Required : Exception Handling
     
-    private Long calculateRentalDays(){
+    public void calculateRentalDays(){
        
         if (startDate != null && endDate != null && startDate.getValue() !=null && endDate.getValue() !=null) {
 
@@ -206,36 +219,61 @@ public class CreateBookingController implements Initializable {
 
             Long daysDifference = ChronoUnit.DAYS.between(startDate, endDate)+ 1;
             
-            rentalDurationLable.setText(Long.toString(daysDifference)+" days");
+            rentalDurationLable.setText(Long.toString(daysDifference));
             
-            return daysDifference;
-
+            calculateBookingAmount();
+         
         }               
-        return null;
             
 
         
 
     }
     
-   
-    @FXML
-    public void generateDetails() throws IOException {
+    private void calculateBookingAmount(){
+         if (selectedCustomer!=null && selectedCar!=null && rentalDurationLable.getText()!=null && !(rentalDurationLable.getText().isEmpty()) ) {
 
-        if (selectCustomer() && selectCar() !=null && calculateRentalDays() !=null) {
-
-            Double rentalAmount=selectCar().pricePerDay*calculateRentalDays();
+            Double rentalAmount=selectedCar.pricePerDay*Integer.parseInt(rentalDurationLable.getText());
+            Double totalRentalAmount=rentalAmount+(rentalAmount*0.13);
             
             rentalAmountLabel.setText(Double.toString(rentalAmount));
             gstLabel.setText(Double.toString(rentalAmount*0.13));
-            totalAmountLabel.setText(Double.toString(rentalAmount+(rentalAmount*0.13)));
+            totalAmountLabel.setText(Double.toString(totalRentalAmount));
             
-
-        }else{
-            
-            System.out.println("Please Fill all the fields ");
+            calculatedRentalAmount=totalRentalAmount;
         }
-
     }
+    
+   
+    @FXML
+    public void confirmBooking() throws IOException {
+        
+        if (selectedCustomer!=null && selectedCar!=null && rentalDurationLable.getText()!=null && !(rentalDurationLable.getText().isEmpty()) ) {
+            
+            BookingsData.getInstance().addBooking(new Booking(selectedCustomer, selectedCar, startDate.getValue(), endDate.getValue(), calculatedRentalAmount));
+            
+            // remove booked car from TableView
+             carsList.setAll(
+                        carsList.stream()
+                        .filter(x -> !(x.registrationNumber.equals(selectedCar.registrationNumber)))
+                        .collect(Collectors.toList())
+            );
+             
+            selectedCar=null;
+            selectedCarListView.getItems().setAll();
+            
+            //Code to implement Alert/Prompt for confirming booking and to display BookingId     
+            System.out.println("Booking Confirmed");
+            
+            //Navigate to Homepage
+            switchToHomepage();
+            
+        
+        }else{
+            System.out.println("Please fill out all the fields");
+        }
+        
+
+    }        
     
 }

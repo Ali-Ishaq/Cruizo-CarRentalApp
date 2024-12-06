@@ -49,4 +49,14 @@ public class HomePageController implements Initializable {
     private void switchToCreateBooking(ActionEvent event) throws IOException {
         App.setRoot("CreateBooking"); 
     }
+    
+    @FXML
+    private void switchToExistingBookings(ActionEvent event) throws IOException {
+        App.setRoot("ExistingBookings"); 
+    }
+    
+    @FXML
+     public void switchToAuthPage(ActionEvent event) throws IOException{
+        App.setRoot("AuthPage"); 
+    }
 }

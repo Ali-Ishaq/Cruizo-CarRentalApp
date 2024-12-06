@@ -14,6 +14,8 @@ public class Car {
     public String category;
     public String registrationNumber;
     public Double pricePerDay;
+    public String status;
+    
 
     public Car(String make, String model, String category, String registrationNumber, Double pricePerDay) {
         this.make = make;
@@ -21,6 +23,7 @@ public class Car {
         this.category = category;
         this.registrationNumber = registrationNumber;
         this.pricePerDay = pricePerDay;
+        this.status="Available";
     }
 
     public String getMake() {
@@ -42,6 +45,15 @@ public class Car {
     public Double getPricePerDay() {
         return pricePerDay;
     }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
     
     
 }

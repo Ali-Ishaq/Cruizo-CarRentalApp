@@ -51,8 +51,8 @@
       </Label>
       <TextField fx:id="CustomerField" layoutX="52.0" layoutY="99.0" onKeyTyped="#filterCustomersList" prefHeight="25.0" prefWidth="250.0" promptText="Search Customer" style="-fx-background-radius: 5px;" />
       <TextField fx:id="CarField" layoutX="360.0" layoutY="99.0" onKeyTyped="#filterCarsList" prefHeight="25.0" prefWidth="250.0" promptText="Search Car" style="-fx-background-radius: 5px;" />
-      <DatePicker fx:id="startDate" layoutX="51.0" layoutY="426.0" prefHeight="25.0" prefWidth="250.0" />
-      <TableView fx:id="CustomerTable" layoutX="52.0" layoutY="139.0" prefHeight="250.0" prefWidth="250.0" stylesheets="@tableViewStyle.css">
+      <DatePicker fx:id="startDate" layoutX="51.0" layoutY="426.0" onAction="#calculateRentalDays" prefHeight="25.0" prefWidth="250.0" />
+      <TableView fx:id="CustomerTable" layoutX="52.0" layoutY="139.0" onMouseClicked="#selectCustomer" prefHeight="250.0" prefWidth="250.0" stylesheets="@tableViewStyle.css">
         <columns>
           <TableColumn fx:id="FullNameColumn" prefWidth="75.0" text="Full Name" />
           <TableColumn fx:id="LicenseNumberColumn" prefWidth="75.0" text="License Number" />
@@ -61,7 +61,7 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <TableView fx:id="CarTable" layoutX="360.0" layoutY="139.0" prefHeight="250.0" prefWidth="250.0" stylesheets="@tableViewStyle.css">
+      <TableView fx:id="CarTable" layoutX="360.0" layoutY="139.0" onMouseClicked="#selectCar" prefHeight="250.0" prefWidth="250.0" stylesheets="@tableViewStyle.css">
          <columns>
             <TableColumn fx:id="CarModelColumn" prefWidth="75.0" text="Model" />
             <TableColumn fx:id="CarRegistrationColumn" prefWidth="75.0" text="Registration" />
@@ -70,10 +70,10 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <DatePicker fx:id="endDate" layoutX="359.0" layoutY="423.0" prefHeight="25.0" prefWidth="250.0" />
+      <DatePicker fx:id="endDate" layoutX="359.0" layoutY="423.0" onAction="#calculateRentalDays" prefHeight="25.0" prefWidth="250.0" />
       <Label layoutX="49.0" layoutY="393.0" text="Start Date" />
       <Label layoutX="359.0" layoutY="404.0" text="End Date" />
-      <Button layoutX="51.0" layoutY="496.0" mnemonicParsing="false" onAction="#generateDetails" prefHeight="30.0" prefWidth="561.0" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Confirm Details" textFill="WHITE">
+      <Button layoutX="51.0" layoutY="496.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="30.0" prefWidth="561.0" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Confirm Booking" textFill="WHITE">
          <font>
             <Font name="Jost SemiBold" size="15.0" />
          </font></Button>
