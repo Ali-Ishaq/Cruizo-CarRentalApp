@@ -1,11 +1,11 @@
 com\cruizo\controllers\CreateBookingController$2.class
 com\cruizo\data\CustomersData.class
 com\cruizo\models\Booking.class
+com\cruizo\data\BookingsData.class
 com\cruizo\controllers\ExistingBookingsController.class
 com\cruizo\models\Car.class
 module-info.class
 com\cruizo\controllers\HomePageController.class
-com\cruizo\data\BookingsData.class
 com\cruizo\controllers\AuthPageController.class
 com\cruizo\controllers\CreateBookingController$1.class
 com\cruizo\controllers\CreateBookingController.class

@@ -3,37 +3,75 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1080.0" styleClass="auth-page" stylesheets="@AuthPageStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.AuthPageController">
-   <right>
-      <AnchorPane minWidth="-Infinity" prefHeight="720.0" prefWidth="387.0" BorderPane.alignment="CENTER">
+
+<HBox alignment="CENTER" fillHeight="false" maxHeight="576.0" maxWidth="1080.0" prefHeight="576.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane minWidth="-Infinity" prefHeight="374.0" prefWidth="313.0">
          <children>
-            <TextField fx:id="userNameTextField" layoutX="102.0" layoutY="317.0" prefHeight="19.0" prefWidth="181.0" />
-            <PasswordField fx:id="password" layoutX="102.0" layoutY="375.0" prefHeight="24.0" prefWidth="182.0" />
-            <Label fx:id="welcomeLabel" layoutX="76.0" layoutY="146.0" prefHeight="53.0" prefWidth="288.0" text="WELCOME" textFill="#001351">
+            <Label alignment="CENTER" layoutX="-1.0" layoutY="-5.0" style="-fx-text-fill: #eb8c2c; -fx-font-weight: 800; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="Cruizo ," wrapText="true">
                <font>
-                  <Font name="Jost SemiBold" size="48.0" />
+                  <Font name="Poppins Regular" size="58.0" />
                </font>
             </Label>
-            <Label layoutX="103.0" layoutY="292.0" text="Username">
+            <Label alignment="CENTER" layoutX="-1.0" layoutY="57.0" style="-fx-text-fill: black; -fx-font-weight: 800; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="Car Rental ">
                <font>
-                  <Font name="Jost SemiBold" size="15.0" />
+                  <Font name="Poppins Regular" size="48.0" />
                </font>
             </Label>
-            <Label layoutX="103.0" layoutY="351.0" text="Password">
+            <Label alignment="CENTER" layoutY="108.0" style="-fx-text-fill: black; -fx-font-weight: 800; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="App">
                <font>
-                  <Font name="Jost SemiBold" size="15.0" />
+                  <Font name="Poppins Black" size="48.0" />
                </font>
             </Label>
-            <Button fx:id="loginButton" layoutX="101.0" layoutY="424.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="183.0" style="-fx-background-radius: 50px;" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Login" textFill="WHITE">
+            <Label layoutY="195.0" prefHeight="92.0" prefWidth="264.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="Don,t deny yourself the pleasure of driving the best cars from around the world here and now ." textFill="#464646" wrapText="true">
+               <font>
+                  <Font name="Jost Regular" size="17.0" />
+               </font>
+            </Label>
+            <Line endX="180.0" layoutX="98.0" layoutY="189.0" startX="-100.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="567.0" fitWidth="344.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@authImg.png" />
+         </image>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </ImageView>
+      <AnchorPane minWidth="-Infinity" prefHeight="484.0" prefWidth="298.0" style="-fx-background-color: #ffffffb0; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(100, 100, 111, 0.2), 29, 0, 0, 7);">
+         <children>
+            <ImageView fx:id="lockIcon" fitHeight="46.0" fitWidth="58.0" layoutX="125.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@LockBlack.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="welcomeLabel" layoutX="117.0" layoutY="87.0" style="-fx-text-fill: black; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="LogIn">
+               <font>
+                  <Font name="Poppins Bold" size="28.0" />
+               </font>
+            </Label>
+            <Line fx:id="lineAboveWelcome" endX="120.0" layoutX="150.0" layoutY="139.0" startX="-131.0" />
+            <Label layoutX="50.0" layoutY="177.0" text="Username">
+               <font>
+                  <Font name="Jost Regular" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userNameTextField" layoutX="46.0" layoutY="201.0" maxWidth="230.0" prefHeight="25.0" prefWidth="208.0" style="-fx-background-radius: 0; -fx-background-color: #f4f4f4; -fx-background-radius: 5; -fx-border-color: #d2dae1; -fx-border-radius: 5;" />
+            <Label layoutX="52.0" layoutY="259.0" text="Password">
+               <font>
+                  <Font name="Jost Regular" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginButton" layoutX="63.0" layoutY="360.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="183.0" style="-fx-background-radius: 50px; -fx-background-color: #eb8c2c; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Login" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -41,69 +79,11 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Line fx:id="lineBelowWelcome" endX="116.0" layoutX="200.0" layoutY="256.0" startX="-113.0" />
-            <Line fx:id="lineAboveWelcome" endX="145.0" layoutX="192.0" layoutY="216.0" startX="-131.0" />
-            <ImageView fx:id="lockIcon" fitHeight="61.0" fitWidth="61.0" layoutX="158.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@LockBlack.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="97.0" layoutY="214.0" prefHeight="40.0" prefWidth="224.0" text="TO LOGIN PAGE">
-               <font>
-                  <Font name="Jost Light" size="29.0" />
-               </font>
-            </Label>
+            <TextField fx:id="password" layoutX="47.0" layoutY="283.0" maxWidth="230.0" prefHeight="25.0" prefWidth="208.0" style="-fx-background-radius: 0; -fx-background-color: #f4f4f4; -fx-background-radius: 5; -fx-border-color: #d2dae1; -fx-border-radius: 5;" />
          </children>
+         <HBox.margin>
+            <Insets left="30.0" />
+         </HBox.margin>
       </AnchorPane>
-   </right>
-   <center>
-      <AnchorPane prefHeight="1086.0" prefWidth="836.0" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="510.0" fitWidth="437.0" layoutX="29.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@porsche%20top1.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-   </center>
-   <left>
-      <AnchorPane minWidth="-Infinity" prefHeight="722.0" prefWidth="397.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="CENTER" layoutX="8.0" layoutY="176.0" prefHeight="103.0" prefWidth="380.0" text="CRUIZO">
-               <font>
-                  <Font name="Jost ExtraBold" size="70.0" />
-               </font>
-            </Label>
-            <Label layoutX="76.0" layoutY="286.0" text="Cruizo is a user-friendly car rental app">
-               <font>
-                  <Font name="Jost Light" size="15.0" />
-               </font>
-            </Label>
-            <Label layoutX="67.0" layoutY="310.0" text="designed to make your travel hassle-free.">
-               <font>
-                  <Font name="Jost Light" size="15.0" />
-               </font>
-            </Label>
-            <Label layoutX="32.0" layoutY="334.0" text="With a smooth interface and quick booking process">
-               <font>
-                  <Font name="Jost Light" size="15.0" />
-               </font>
-            </Label>
-            <Label layoutX="36.0" layoutY="360.0" text="we ensure you get the perfect ride for any journey.">
-               <font>
-                  <Font name="Jost Light" size="15.0" />
-               </font>
-            </Label>
-            <Label layoutX="43.0" layoutY="385.0" text="Explore, book, and drive—all in just a few clicks!">
-               <font>
-                  <Font name="Jost Light" size="15.0" />
-               </font>
-            </Label>
-            <Line endX="148.0" layoutX="213.0" layoutY="180.0" startX="-169.0" />
-            <Line endX="148.0" layoutX="200.0" layoutY="274.0" startX="-154.0" />
-            <Line endX="142.0" layoutX="210.0" layoutY="428.0" startX="-177.33334350585938" strokeDashOffset="5.0" />
-         </children>
-      </AnchorPane>
-   </left>
-</BorderPane>
+   </children>
+</HBox>
