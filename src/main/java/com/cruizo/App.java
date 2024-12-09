@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import javafx.scene.image.Image;
 
 /**
  * JavaFX App
@@ -20,7 +21,10 @@ public class App extends Application {
 //        scene = new Scene(loadFXML("AuthPage"), 640, 480);
            scene = new Scene(loadFXML("AuthPage"),1080,576);
 //             stage.setResizable(false);
+        Image icon = new Image(getClass().getResource("Cruizo.png").toExternalForm());
+        stage.getIcons().add(icon);
         stage.setScene(scene);
+        stage.setTitle("Cruizo Car Rental App"); // Title set
         stage.show();
     }
 
