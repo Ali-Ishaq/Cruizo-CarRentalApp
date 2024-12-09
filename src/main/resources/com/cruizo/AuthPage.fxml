@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<HBox alignment="CENTER" fillHeight="false" maxHeight="576.0" maxWidth="1080.0" prefHeight="576.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<HBox alignment="CENTER" fillHeight="false" maxHeight="576.0" maxWidth="1080.0" prefHeight="576.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.AuthPageController">
    <children>
       <AnchorPane minWidth="-Infinity" prefHeight="374.0" prefWidth="313.0">
          <children>
@@ -60,13 +61,13 @@
                </font>
             </Label>
             <Line fx:id="lineAboveWelcome" endX="120.0" layoutX="150.0" layoutY="139.0" startX="-131.0" />
-            <Label layoutX="50.0" layoutY="177.0" text="Username">
+            <Label layoutX="51.0" layoutY="191.0" text="Username">
                <font>
                   <Font name="Jost Regular" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="userNameTextField" layoutX="46.0" layoutY="201.0" maxWidth="230.0" prefHeight="25.0" prefWidth="208.0" style="-fx-background-radius: 0; -fx-background-color: #f4f4f4; -fx-background-radius: 5; -fx-border-color: #d2dae1; -fx-border-radius: 5;" />
-            <Label layoutX="52.0" layoutY="259.0" text="Password">
+            <TextField fx:id="userNameTextField" layoutX="46.0" layoutY="214.0" maxWidth="230.0" prefHeight="25.0" prefWidth="208.0" style="-fx-background-radius: 0; -fx-background-color: #f4f4f4; -fx-background-radius: 5; -fx-border-color: #d2dae1; -fx-border-radius: 5;" />
+            <Label layoutX="52.0" layoutY="261.0" text="Password">
                <font>
                   <Font name="Jost Regular" size="15.0" />
                </font>
@@ -79,7 +80,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <TextField fx:id="password" layoutX="47.0" layoutY="283.0" maxWidth="230.0" prefHeight="25.0" prefWidth="208.0" style="-fx-background-radius: 0; -fx-background-color: #f4f4f4; -fx-background-radius: 5; -fx-border-color: #d2dae1; -fx-border-radius: 5;" />
+            <PasswordField fx:id="password" layoutX="47.0" layoutY="284.0" prefHeight="27.0" prefWidth="208.0" style="-fx-background-color: #f4f4f4; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #d2dae1;" />
          </children>
          <HBox.margin>
             <Insets left="30.0" />

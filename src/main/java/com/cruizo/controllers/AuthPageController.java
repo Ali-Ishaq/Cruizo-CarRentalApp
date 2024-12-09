@@ -22,34 +22,25 @@ import javafx.scene.shape.Line;
 import javafx.stage.Stage;
 
 public class AuthPageController implements Initializable {
-  @FXML
-    private ImageView carDealLogo;
-
-    @FXML
-    private Line lineAboveWelcome;
-
-    @FXML
-    private Line lineBelowWelcome;
-    private ImageView lockIcon;
-
+ 
+ 
+    
+ 
     @FXML
     private Button loginButton;
 
     @FXML
     private PasswordField password;
+    
+    
 
     @FXML
     private TextField userNameTextField;
 
-    @FXML
-    private Label welcomeLabel;
-    private Parent root;
-    private Stage stage;
-    private Scene scene;
- 
+    
     
    @FXML
-private void login(ActionEvent event) throws IOException {
+    private void login(ActionEvent event) throws IOException {
     // Get username and password inputs
     String username = userNameTextField.getText().trim();
     String pwd = password.getText().trim();
