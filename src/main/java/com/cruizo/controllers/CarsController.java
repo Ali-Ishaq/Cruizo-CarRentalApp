@@ -95,14 +95,14 @@ public class CarsController implements Initializable {
 
         // Validate inputs
         if (make.isEmpty() || model.isEmpty() || registrationNumber.isEmpty() || priceStr.isEmpty()|| category== null ){
-            System.out.println("Error: All fields are required!");
+            App.showError("Error: All fields are required!"); //This will show a dialogue box
             return;
         }
         
         try {
             price=Double.parseDouble(priceStr);   
         } catch (NumberFormatException e) {
-            System.out.println("Inalid Amount");
+            App.showError("Invalid Amount"); //This will show a dialogue box
             return;
         }
 

@@ -112,7 +112,7 @@ public class ExistingBookingsController implements  Initializable{
 
             
         }else{
-            System.out.println("Please select the booking first !");
+            App.showError("Please select the booking first !");
         }
         
     }
