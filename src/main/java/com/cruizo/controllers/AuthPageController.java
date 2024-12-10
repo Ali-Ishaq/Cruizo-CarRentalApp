@@ -98,6 +98,6 @@ private void showAlert(Alert.AlertType alertType, String title, String message) 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+         loginButton.setDefaultButton(true); // pressing Enter will act as login button action
     }
 }
