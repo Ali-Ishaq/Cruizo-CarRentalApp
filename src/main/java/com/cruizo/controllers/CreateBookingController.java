@@ -270,7 +270,7 @@ public class CreateBookingController implements Initializable {
             
         
         }else{
-            System.out.println("Please fill out all the fields");
+            App.showError("Please fill out all the fields");
         }
         
 
