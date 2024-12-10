@@ -96,7 +96,7 @@
                   <Font name="Jost Regular" size="15.0" />
                </font>
             </Text>
-            <Text layoutX="282.0" layoutY="104.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Create" x="26.0" y="130.0">
+            <Text layoutX="283.0" layoutY="104.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Create" x="26.0" y="130.0">
                <font>
                   <Font name="Jost Regular" size="15.0" />
                </font>

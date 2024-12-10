@@ -9,30 +9,46 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-
 
 <HBox alignment="CENTER" fillHeight="false" maxHeight="576.0" maxWidth="1080.0" prefHeight="576.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cruizo.controllers.AuthPageController">
    <children>
       <AnchorPane minWidth="-Infinity" prefHeight="374.0" prefWidth="313.0">
          <children>
-            <Label alignment="CENTER" layoutX="-1.0" layoutY="-5.0" style="-fx-text-fill: #eb8c2c; -fx-font-weight: 800; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="Cruizo ," wrapText="true">
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#ffffff00" height="110.0" layoutX="18.0" layoutY="51.0" strokeType="INSIDE" width="235.0">
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.8899999856948853" green="0.3771904706954956" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.9215686321258545" green="0.5490196347236633" blue="0.1725490242242813" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Rectangle>
+            <Label alignment="CENTER" layoutX="34.0" layoutY="44.0" style="-fx-text-fill: #eb8c2c; -fx-font-weight: 800; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="Cruizo " wrapText="true">
                <font>
-                  <Font name="Poppins Regular" size="58.0" />
+                  <Font name="Poppins Regular" size="60.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="-1.0" layoutY="57.0" style="-fx-text-fill: black; -fx-font-weight: 800; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="Car Rental ">
+            <Label alignment="CENTER" layoutX="-14.0" layoutY="98.0" prefHeight="68.0" prefWidth="298.0" style="-fx-text-fill: black; -fx-font-weight: 800; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="Car Rental App">
                <font>
-                  <Font name="Poppins Regular" size="48.0" />
+                  <Font name="Poppins Regular" size="27.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutY="108.0" style="-fx-text-fill: black; -fx-font-weight: 800; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="App">
-               <font>
-                  <Font name="Poppins Black" size="48.0" />
-               </font>
-            </Label>
-            <Label layoutY="195.0" prefHeight="92.0" prefWidth="264.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="Don,t deny yourself the pleasure of driving the best cars from around the world here and now ." textFill="#464646" wrapText="true">
+            <Label layoutX="2.0" layoutY="195.0" prefHeight="92.0" prefWidth="264.0" style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="Don't deny yourself the pleasure of driving the best cars from around the world here and now ." textAlignment="CENTER" textFill="#464646" wrapText="true">
                <font>
                   <Font name="Jost Regular" size="17.0" />
                </font>
@@ -50,12 +66,12 @@
       </ImageView>
       <AnchorPane minWidth="-Infinity" prefHeight="484.0" prefWidth="298.0" style="-fx-background-color: #ffffffb0; -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(100, 100, 111, 0.2), 29, 0, 0, 7);">
          <children>
-            <ImageView fx:id="lockIcon" fitHeight="46.0" fitWidth="58.0" layoutX="125.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="lockIcon" fitHeight="46.0" fitWidth="58.0" layoutX="118.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@LockBlack.png" />
                </image>
             </ImageView>
-            <Label fx:id="welcomeLabel" layoutX="117.0" layoutY="87.0" style="-fx-text-fill: black; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="LogIn">
+            <Label fx:id="welcomeLabel" layoutX="109.0" layoutY="87.0" style="-fx-text-fill: black; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="Login">
                <font>
                   <Font name="Poppins Bold" size="28.0" />
                </font>
