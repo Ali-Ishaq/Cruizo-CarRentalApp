@@ -45,10 +45,11 @@
 
 /* Table Cells */
 .table-view .cell {
-    -fx-padding: 8px;
+    -fx-padding: 7px;
     -fx-font-size: 13px;
     -fx-font-family: "Jost";
     -fx-text-fill: #333;
+    -fx-alignment: center ;
 }
 
 /* Selected Cell */

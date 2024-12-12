@@ -35,6 +35,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
+import com.cruizo.Utilities;
 
 
 /**
@@ -261,18 +262,20 @@ public class CreateBookingController implements Initializable {
         
         // Get the booking ID from the created booking object
         String bookingId = newBooking.getBookingId();  // Accessing the bookingId of the booking
-        
-        // Remove booked car from the available cars list
+        System.out.println(bookingId);
+        // Filtering out  booked/rented cars from the available cars list
         carsList.setAll(
             carsList.stream()
             .filter(x -> !(x.registrationNumber.equals(selectedCar.registrationNumber)))
             .collect(Collectors.toList())
         );
         
-        selectedCar = null;
-        selectedCarListView.getItems().setAll();
+        
 
         // Show a confirmation dialog with the booking ID
+        
+        
+        
         Alert confirmationAlert = new Alert(AlertType.INFORMATION, "Your booking has been confirmed. Booking ID: " + bookingId, ButtonType.OK);
         confirmationAlert.setTitle("Booking Confirmation");
         confirmationAlert.setHeaderText("Booking Confirmed!");

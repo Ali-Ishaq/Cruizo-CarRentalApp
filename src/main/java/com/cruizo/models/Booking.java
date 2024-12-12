@@ -21,7 +21,7 @@ public class Booking {
     private Double bookingAmount;
     
     public Booking( Customer customer, Car car, LocalDate startDate, LocalDate endDate, Double bookingAmount) {
-        this.bookingId = Long.toString(new Date().getTime());
+        this.bookingId = Long.toString(new Date().getTime()).substring(0,10);
         this.customer = customer;
         this.car = car;
         this.startDate = startDate;

@@ -65,7 +65,7 @@ public class CarsController implements Initializable {
 
         // Setting Options of Category ComboBox 
         ObservableList<String> options = FXCollections.observableArrayList(
-                "HatchBack", "Sedan", "SUV"
+                "Hatchback", "Sedan", "SUV"
         );
         categoryComboBox.setItems(options);
 

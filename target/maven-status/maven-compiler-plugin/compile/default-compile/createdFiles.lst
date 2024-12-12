@@ -6,6 +6,7 @@ com\cruizo\controllers\ExistingBookingsController.class
 com\cruizo\models\Car.class
 module-info.class
 com\cruizo\controllers\HomePageController.class
+com\cruizo\Utilities.class
 com\cruizo\controllers\AuthPageController.class
 com\cruizo\controllers\CreateBookingController$1.class
 com\cruizo\controllers\CreateBookingController.class
