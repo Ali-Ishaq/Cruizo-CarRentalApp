@@ -64,7 +64,7 @@
                   <URL value="@ButtonsInCustomer.css" />
                </stylesheets>
             </Button>
-            <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="23.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="23.0" layoutY="61.0" onMouseClicked="#switchToHomepage" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@back-arrow.png" />
                </image>
