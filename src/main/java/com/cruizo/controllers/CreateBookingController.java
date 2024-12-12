@@ -250,36 +250,6 @@ public class CreateBookingController implements Initializable {
     
    
     @FXML
-    /*public void confirmBooking() throws IOException {
-        
-        if (selectedCustomer!=null && selectedCar!=null && rentalDurationLable.getText()!=null && !(rentalDurationLable.getText().isEmpty()) ) {
-            
-            BookingsData.getInstance().addBooking(new Booking(selectedCustomer, selectedCar, startDate.getValue(), endDate.getValue(), calculatedRentalAmount));
-            
-            // remove booked car from TableView
-             carsList.setAll(
-                        carsList.stream()
-                        .filter(x -> !(x.registrationNumber.equals(selectedCar.registrationNumber)))
-                        .collect(Collectors.toList())
-            );
-             
-            selectedCar=null;
-            selectedCarListView.getItems().setAll();
-            
-            //Code to implement Alert/Prompt for confirming booking and to display BookingId     
-            System.out.println("Booking Confirmed");
-            
-            //Navigate to Homepage
-            switchToHomepage();
-            
-        
-        }else{
-            App.showError("Please fill out all the fields");
-        }
-        
-
-    } */       
-    
     public void confirmBooking() throws IOException {
     if (selectedCustomer != null && selectedCar != null && rentalDurationLable.getText() != null && !(rentalDurationLable.getText().isEmpty())) {
         

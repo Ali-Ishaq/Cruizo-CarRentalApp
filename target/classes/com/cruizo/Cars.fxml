@@ -77,23 +77,23 @@
             <TextField fx:id="registrationTextField" layoutX="243.0" layoutY="183.0" promptText="Registration Number" style="-fx-background-radius: 5px;" />
             <TextField fx:id="priceTextField" layoutX="243.0" layoutY="219.0" promptText="Price per day" style="-fx-background-radius: 5px;" />
             <ComboBox fx:id="categoryComboBox" layoutX="54.0" layoutY="258.0" prefWidth="150.0" promptText="Select a Category" style="-fx-background-radius: 50 px;" styleClass="buttons" />
-            <Button layoutX="77.0" layoutY="28.0" minHeight="22.0" mnemonicParsing="false" onAction="#switchToHomepage" prefHeight="27.0" prefWidth="92.0" styleClass="buttons" text="Back">
+            <Button layoutX="77.0" layoutY="28.0" minHeight="22.0" mnemonicParsing="false" onAction="#switchToHomepage" prefHeight="27.0" prefWidth="92.0" style="-fx-font-weight: 800;" styleClass="buttons" text="Back">
                <font>
-                  <Font name="Jost Black" size="12.0" />
+                  <Font name="Jost Regular" size="12.0" />
                </font>
                <stylesheets>
                   <URL value="@CsutomerButton.css" />
                   <URL value="@ButtonsInCustomer.css" />
                </stylesheets>
             </Button>
-            <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="20.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="20.0" layoutY="15.0" onMouseClicked="#switchToHomepage" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@back-arrow.png" />
                </image>
             </ImageView>
-            <Label layoutX="106.0" layoutY="107.0" text="Select Your Car">
+            <Label layoutX="106.0" layoutY="107.0" style="-fx-font-weight: 700;" text="Select Your Car">
                <font>
-                  <Font name="Jost SemiBold" size="33.0" />
+                  <Font name="Jost Regular" size="33.0" />
                </font>
             </Label>
          </children>
