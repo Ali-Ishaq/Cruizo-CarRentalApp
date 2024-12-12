@@ -32,6 +32,10 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonType;
+
 
 /**
  *
@@ -246,7 +250,7 @@ public class CreateBookingController implements Initializable {
     
    
     @FXML
-    public void confirmBooking() throws IOException {
+    /*public void confirmBooking() throws IOException {
         
         if (selectedCustomer!=null && selectedCar!=null && rentalDurationLable.getText()!=null && !(rentalDurationLable.getText().isEmpty()) ) {
             
@@ -274,6 +278,41 @@ public class CreateBookingController implements Initializable {
         }
         
 
-    }        
+    } */       
     
+    public void confirmBooking() throws IOException {
+    if (selectedCustomer != null && selectedCar != null && rentalDurationLable.getText() != null && !(rentalDurationLable.getText().isEmpty())) {
+        
+        // Create the new booking object
+        Booking newBooking = new Booking(selectedCustomer, selectedCar, startDate.getValue(), endDate.getValue(), calculatedRentalAmount);
+        
+        // Add the new booking to the booking data
+        BookingsData.getInstance().addBooking(newBooking);
+        
+        // Get the booking ID from the created booking object
+        String bookingId = newBooking.getBookingId();  // Accessing the bookingId of the booking
+        
+        // Remove booked car from the available cars list
+        carsList.setAll(
+            carsList.stream()
+            .filter(x -> !(x.registrationNumber.equals(selectedCar.registrationNumber)))
+            .collect(Collectors.toList())
+        );
+        
+        selectedCar = null;
+        selectedCarListView.getItems().setAll();
+
+        // Show a confirmation dialog with the booking ID
+        Alert confirmationAlert = new Alert(AlertType.INFORMATION, "Your booking has been confirmed. Booking ID: " + bookingId, ButtonType.OK);
+        confirmationAlert.setTitle("Booking Confirmation");
+        confirmationAlert.setHeaderText("Booking Confirmed!");
+        confirmationAlert.showAndWait();
+
+        // Navigate to Homepage
+        switchToHomepage();
+        
+    } else {
+        App.showError("Please fill out all the fields");
+    }
+}
 }

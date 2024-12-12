@@ -71,7 +71,7 @@
          </columnResizePolicy>
       </TableView>
       <DatePicker fx:id="endDate" layoutX="359.0" layoutY="423.0" onAction="#calculateRentalDays" prefHeight="25.0" prefWidth="250.0" />
-      <Label layoutX="49.0" layoutY="393.0" text="Start Date" />
+      <Label layoutX="53.0" layoutY="407.0" text="Start Date" />
       <Label layoutX="359.0" layoutY="404.0" text="End Date" />
       <Button layoutX="51.0" layoutY="496.0" mnemonicParsing="false" onAction="#confirmBooking" prefHeight="30.0" prefWidth="561.0" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Confirm Booking" textFill="WHITE">
          <font>
