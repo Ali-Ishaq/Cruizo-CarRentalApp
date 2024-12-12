@@ -81,9 +81,9 @@
          </columnResizePolicy>
       </TableView>
       <TextField fx:id="searchField" layoutX="38.0" layoutY="101.0" onKeyTyped="#searchBooking" prefHeight="25.0" prefWidth="196.0" promptText="Enter Booking Id" style="-fx-background-radius: 5px;" />
-      <Label layoutX="386.0" layoutY="42.0" text="Booking Records">
+      <Label layoutX="384.0" layoutY="42.0" style="-fx-font-weight: 700;" text="Booking Records">
          <font>
-            <Font name="Jost SemiBold" size="40.0" />
+            <Font name="Jost Regular" size="40.0" />
          </font>
       </Label>
       <Button layoutX="936.0" layoutY="98.0" mnemonicParsing="false" onAction="#removeBooking" prefHeight="29.0" prefWidth="115.0" style="-fx-background-radius: 10px;" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Delete Booking" textFill="WHITE">
@@ -99,7 +99,7 @@
             <URL value="@ButtonsInCustomer.css" />
          </stylesheets>
       </Button>
-      <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="18.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="18.0" layoutY="22.0" onMouseClicked="#switchToHomepage" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@back-arrow.png" />
          </image>
