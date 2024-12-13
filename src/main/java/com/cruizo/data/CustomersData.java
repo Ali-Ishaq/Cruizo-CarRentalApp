@@ -30,7 +30,6 @@ public class CustomersData {
                 new Customer("Muneeb", "Ahsen", "muneeb@gmail.com", "03328920472", "KZ255089"),
                 new Customer("Abdul", "Hadi", "hadi@gmail.com", "03324920572", "KS235689"),
                 new Customer("Ayan", "Humayon", "ayan@gmail.com", "03324922472", "KR236989"),
-                new Customer("Ayan", "Humayon", "ayan@gmail.com", "03324922472", "KR236989"),
                 new Customer("Imran", "Ahmed", "imran.ahmed@example.com", "03351234567", "KR236990"),
                 new Customer("Sana", "Ahmed", "sana.ahmed@example.com", "03451234567", "KR236991"),
                 new Customer("Rohit", "Sharma", "rohit.sharma@example.com", "03241234567", "KR236992"),

@@ -5,6 +5,7 @@
 package com.cruizo.controllers;
 
 import com.cruizo.App;
+import com.cruizo.Utilities;
 import com.cruizo.data.BookingsData;
 import com.cruizo.models.Booking;
 import java.io.IOException;
@@ -18,6 +19,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -111,8 +113,8 @@ public class ExistingBookingsController implements  Initializable{
             );
 
             
-        }else{
-            App.showError("Please select the booking first !");
+        }else{        
+            Utilities.showAlert(Alert.AlertType.ERROR, "Error", "Please select a booking first");
         }
         
     }
