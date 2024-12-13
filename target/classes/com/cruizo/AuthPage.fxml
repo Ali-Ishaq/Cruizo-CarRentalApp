@@ -38,7 +38,7 @@
                   </LinearGradient>
                </stroke>
             </Rectangle>
-            <Label alignment="CENTER" layoutX="34.0" layoutY="44.0" style="-fx-text-fill: #eb8c2c; -fx-font-weight: 800; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" text="Cruizo " wrapText="true">
+            <Label alignment="CENTER" layoutX="-15.0" layoutY="44.0" prefHeight="85.0" prefWidth="313.0" style="-fx-text-fill: #eb8c2c; -fx-font-weight: 800; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 1);" stylesheets="@Font.css" text="Cruizo " wrapText="true">
                <font>
                   <Font name="Poppins Regular" size="60.0" />
                </font>

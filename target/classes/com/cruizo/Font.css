@@ -1,0 +1,16 @@
+/* Define custom fonts */
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Jost";
+    src: url("../fonts/Jost/static/Jost-Regular.ttf") format("truetype");
+}
+
+/* Apply the fonts to UI components */
+.label {
+    -fx-font-family: "Poppins";
+    -fx-text-fill: #000;
+}
