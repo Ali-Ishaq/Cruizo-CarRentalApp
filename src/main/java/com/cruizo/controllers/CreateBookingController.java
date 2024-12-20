@@ -38,10 +38,7 @@ import javafx.scene.control.ButtonType;
 import com.cruizo.Utilities;
 
 
-/**
- *
- * @author ALI
- */
+
 public class CreateBookingController implements Initializable {
 
     @FXML
@@ -156,10 +153,10 @@ public class CreateBookingController implements Initializable {
     }
 
     public void switchToHomepage() throws IOException {
-        App.setRoot("HomePage");
+        Utilities.setRoot("HomePage");
     }
     public void switchToConfirmation() throws IOException {
-        App.setRoot("Confirmation");
+        Utilities.setRoot("Confirmation");
     }
 
     @FXML

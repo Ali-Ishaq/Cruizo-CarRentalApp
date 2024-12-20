@@ -17,65 +17,67 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import com.cruizo.Utilities;
 
-/**
- * FXML Controller class
- *
- * @author abdul
- */
 public class HomePageController implements Initializable {
+
     private Label labelTest;
-    @FXML 
+    @FXML
     private Button CustomerButton;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
-    
+    }
+
     @FXML
     private void switchToCustomers(ActionEvent event) throws IOException {
-        
-        App.setRoot("Customers"); 
+
+        Utilities.setRoot("Customers");
     }
-    
+
     @FXML
     private void switchToCars(ActionEvent event) throws IOException {
-        App.setRoot("Cars"); 
+        Utilities.setRoot("Cars");
     }
+
     @FXML
     private void switchToCreateBooking(ActionEvent event) throws IOException {
-        App.setRoot("CreateBooking"); 
+        Utilities.setRoot("CreateBooking");
     }
-    
+
     @FXML
     private void switchToExistingBookings(ActionEvent event) throws IOException {
-        App.setRoot("ExistingBookings"); 
+        Utilities.setRoot("ExistingBookings");
     }
-    
+
     @FXML
-     public void switchToAuthPage(ActionEvent event) throws IOException{
-        Alert a1 = new Alert(Alert.AlertType.CONFIRMATION);
-        a1.setTitle("Logout Confirmation");
-        a1.setHeaderText("Are you sure you want to log out?");
-        a1.setContentText("Any unsaved progress will be lost.");
-        
-            a1.showAndWait().ifPresent(response -> {
-            if (response == ButtonType.OK) {
-                System.out.println("User chose to log out.");
-               
-                try {
-                    App.setRoot("AuthPage");
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            } else {
-                System.out.println("User canceled logout.");
+    public void switchToAuthPage(ActionEvent event) throws IOException {
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout Confirmation");
+        alert.setHeaderText("Are you sure you want to log out?");
+        alert.setContentText("Any unsaved progress will be lost.");
+
+        // Show the alert and wait for the user's response
+        alert.showAndWait();
+
+        // Check the user's response
+        if (alert.getResult() == ButtonType.OK) {
+            // User clicked OK, log them out and switch to the AuthPage
+            System.out.println("User chose to log out.");
+            try {
+                Utilities.setRoot("AuthPage"); // Switch to the AuthPage scene
+            } catch (IOException ex) {
+                ex.printStackTrace(); // Print error to console if the scene switching fails
             }
-        });
-//        App.setRoot("AuthPage"); 
+        } else {
+            // User canceled the logout action
+            System.out.println("User canceled logout.");
+        }
+
     }
 }

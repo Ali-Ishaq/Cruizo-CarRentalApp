@@ -12,25 +12,27 @@ import java.util.Optional;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
+import com.cruizo.Utilities;
 
 /**
  * JavaFX App
  */
+
 public class App extends Application {
 
-    private static Scene scene;
+     static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
-//        scene = new Scene(loadFXML("AuthPage"), 640, 480);
-           scene = new Scene(loadFXML("AuthPage"),1080,576);
-//             stage.setResizable(false);
+        
+        scene = new Scene(Utilities.loadFXML("AuthPage"),1080,576);
         Image icon = new Image(getClass().getResource("Cruizo.png").toExternalForm());
         stage.getIcons().add(icon);
         stage.setScene(scene);
-        stage.setTitle("Cruizo Car Rental App"); // Title set
+        stage.setTitle("Cruizo Car Rental App");
         
          // Handle close request to show confirmation alert
+         
         stage.setOnCloseRequest(event -> {
             event.consume(); // Prevent default close operation
             showConfirmationAlert(stage);
@@ -39,22 +41,8 @@ public class App extends Application {
         stage.show();
     }
 
-    public static void setRoot(String fxml) throws IOException {
-//        scene.setRoot(loadFXML(fxml)); 
-//(ALI bhai ye mainay comment out kiya kiunke Homescreen ka size Authpage se inherit horha tha ab sahi chalrha)
 
-    Parent root = loadFXML(fxml);
-    scene.setRoot(root);
     
-    // Get the stage and dynamically resize it based on the root's size
-    Stage stage = (Stage) scene.getWindow();
-    stage.sizeToScene();
-    }
-
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
-    }
 
     public static void main(String[] args) {
         launch();
@@ -68,19 +56,11 @@ public class App extends Application {
         alert.setContentText("Make sure to save your work before exiting.");
 
         // Show the alert and wait for a response
-        Optional<ButtonType> result = alert.showAndWait();
+        alert.showAndWait();
 
-        if (result.isPresent() && result.get() == ButtonType.OK) {
+        if (alert.getResult()== ButtonType.OK) {
             stage.close(); // Close the application if OK is clicked
         }
     }
-    // Universal Method for displaying error on other pages
-//    public static void showError(String message) {
-//    Alert alert = new Alert(Alert.AlertType.ERROR);
-//    alert.setTitle("Error");
-//    alert.setHeaderText(null);
-//    alert.setContentText(message);
-//    alert.showAndWait();
-//}
 
 }

@@ -96,7 +96,9 @@ public class CustomersController implements Initializable {
             return;
         }
 
-        CustomersData.getInstance().addUser(new Customer(firstName, lastName, email, phoneNumer, licenseNumber));
+        Customer newCustomer=new Customer(firstName, lastName, email, phoneNumer, licenseNumber);
+        CustomersData.getInstance().addUser(newCustomer);
+        customerList.add(newCustomer);
 
     }
 
@@ -134,6 +136,6 @@ public class CustomersController implements Initializable {
     }
 
     public void switchToHomepage() throws IOException {
-        App.setRoot("HomePage");
+        Utilities.setRoot("HomePage");
     }
 }

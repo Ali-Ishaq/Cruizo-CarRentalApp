@@ -25,10 +25,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-/**
- *
- * @author ALI
- */
+
 public class ExistingBookingsController implements  Initializable{
     
     @FXML
@@ -134,7 +131,7 @@ public class ExistingBookingsController implements  Initializable{
     
     @FXML
     public void switchToHomepage() throws IOException {
-        App.setRoot("HomePage");
+        Utilities.setRoot("HomePage");
     }
     
 }

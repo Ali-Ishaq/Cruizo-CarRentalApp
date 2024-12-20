@@ -110,7 +110,10 @@ public class CarsController implements Initializable {
             return;
         }
 
-        CarsData.getInstance().addCar(new Car(make, model, category, registrationNumber, price));
+        Car newCar = new Car(make, model, category, registrationNumber, price);
+        CarsData.getInstance().addCar(newCar);
+        carList.add(newCar);
+        
     }
 
     @FXML
@@ -145,7 +148,7 @@ public class CarsController implements Initializable {
     }
 
     public void switchToHomepage() throws IOException {
-        App.setRoot("HomePage");
+        Utilities.setRoot("HomePage");
     }
 
 }

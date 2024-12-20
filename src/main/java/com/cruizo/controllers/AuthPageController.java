@@ -79,7 +79,7 @@ public class AuthPageController implements Initializable {
 //         stage.setScene(scene);
 //         stage.show();
 
-        App.setRoot("HomePage");
+        Utilities.setRoot("HomePage");
 
 
          
