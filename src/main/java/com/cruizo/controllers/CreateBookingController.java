@@ -273,19 +273,24 @@ public class CreateBookingController implements Initializable {
         
 
         // Show a confirmation dialog with the booking ID
+        Utilities.showAlert(
+    Alert.AlertType.INFORMATION, 
+    "Booking Confirmation", 
+    "Your booking has been confirmed. Booking ID: " + bookingId
+);
         
         
-        
-        Alert confirmationAlert = new Alert(AlertType.INFORMATION, "Your booking has been confirmed. Booking ID: " + bookingId, ButtonType.OK);
-        confirmationAlert.setTitle("Booking Confirmation");
-        confirmationAlert.setHeaderText("Booking Confirmed!");
-        confirmationAlert.showAndWait();
+//        Alert confirmationAlert = new Alert(AlertType.INFORMATION, "Your booking has been confirmed. Booking ID: " + bookingId, ButtonType.OK);
+//        confirmationAlert.setTitle("Booking Confirmation");
+//        confirmationAlert.setHeaderText("Booking Confirmed!");
+//        confirmationAlert.showAndWait();
 
         // Navigate to Homepage
         switchToHomepage();
         
     } else {
-        App.showError("Please fill out all the fields");
+       Utilities.showAlert(Alert.AlertType.ERROR, "Error", "Please fill out all the fields");
+
     }
 }
 }

@@ -71,22 +71,22 @@
          <left>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="469.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextField fx:id="firstNameTextField" layoutX="244.0" layoutY="263.0" />
-                  <TextField fx:id="LastNameTextField" layoutX="246.0" layoutY="313.0" />
-                  <Button layoutX="246.0" layoutY="529.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="148.0" style="-fx-background-radius: 50px;" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Add User" textFill="WHITE">
+                  <TextField fx:id="firstNameTextField" layoutX="244.0" layoutY="241.0" />
+                  <TextField fx:id="LastNameTextField" layoutX="246.0" layoutY="291.0" />
+                  <Button layoutX="243.0" layoutY="505.0" mnemonicParsing="false" onAction="#addUser" prefHeight="25.0" prefWidth="148.0" style="-fx-background-radius: 50px;" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Add User" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Label layoutX="244.0" layoutY="246.0" text="First Name" />
-                  <Label layoutX="245.0" layoutY="296.0" text="Last Name" />
-                  <TextField fx:id="emailTextField" layoutX="245.0" layoutY="368.0" />
-                  <Label layoutX="246.0" layoutY="403.0" text="Phone Number" />
-                  <TextField fx:id="phoneNumberTextField" layoutX="244.0" layoutY="420.0" />
-                  <TextField fx:id="licenseNumberTextField" layoutX="244.0" layoutY="472.0" />
-                  <Label layoutX="245.0" layoutY="351.0" text="Email" />
-                  <Label layoutX="245.0" layoutY="455.0" text="License Number" />
-                  <Label layoutX="229.0" layoutY="154.0" style="-fx-font-weight: 700;" text="Customers">
+                  <Label layoutX="244.0" layoutY="224.0" text="First Name" />
+                  <Label layoutX="245.0" layoutY="274.0" text="Last Name" />
+                  <TextField fx:id="emailTextField" layoutX="245.0" layoutY="346.0" />
+                  <Label layoutX="246.0" layoutY="381.0" text="Phone Number" />
+                  <TextField fx:id="phoneNumberTextField" layoutX="244.0" layoutY="398.0" />
+                  <TextField fx:id="licenseNumberTextField" layoutX="244.0" layoutY="450.0" />
+                  <Label layoutX="245.0" layoutY="329.0" text="Email" />
+                  <Label layoutX="245.0" layoutY="433.0" text="License Number" />
+                  <Label layoutX="229.0" layoutY="151.0" style="-fx-font-weight: 700;" text="Customers">
                      <font>
                         <Font name="Jost Regular" size="36.0" />
                      </font>
@@ -104,7 +104,7 @@
                         <Image url="@porsche%20front.png" />
                      </image>
                   </ImageView>
-                  <Line endX="329.0" layoutX="107.0" layoutY="125.0" startX="-76.0" />
+                  <Line endX="329.0" layoutX="107.0" layoutY="117.0" startX="-76.0" />
                </children>
             </AnchorPane>
          </left>

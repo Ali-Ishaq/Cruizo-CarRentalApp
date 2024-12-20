@@ -90,7 +90,9 @@ public class CustomersController implements Initializable {
 
         // Validate inputs
         if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || phoneNumer.isEmpty() || licenseNumber.isEmpty()) {
-            App.showError("Error: All fields are required!");
+       
+            Utilities.showAlert(Alert.AlertType.ERROR, "Error", "Error: All fields are required!");
+
             return;
         }
 

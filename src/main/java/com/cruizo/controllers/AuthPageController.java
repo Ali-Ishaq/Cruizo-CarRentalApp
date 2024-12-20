@@ -20,6 +20,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.shape.Line;
 import javafx.stage.Stage;
+import com.cruizo.Utilities;
 
 public class AuthPageController implements Initializable {
  
@@ -55,7 +56,8 @@ public class AuthPageController implements Initializable {
 
     // Check for empty fields
     if (username.isEmpty() || pwd.isEmpty()) {
-        showAlert(Alert.AlertType.WARNING, "Warning", "Please fill in both username and password.");
+      Utilities.showAlert(Alert.AlertType.WARNING, "Warning", "Please fill in both username and password.");
+    
         return;
     }
 
@@ -70,7 +72,7 @@ public class AuthPageController implements Initializable {
 
     // Show appropriate message
     if (isValid) {
-        showAlert(Alert.AlertType.INFORMATION, "Success", "Login Successful! Welcome, " + username + "!");
+       Utilities.showAlert(Alert.AlertType.INFORMATION, "Success", "Login Successful! Welcome, " + username + "!");
 //        root = FXMLLoader.load(getClass().getResource("HomePage.fxml"));
 //         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 //         scene = new Scene(root);
@@ -83,7 +85,7 @@ public class AuthPageController implements Initializable {
          
 // Navigate to the next page or perform another action
     } else {
-        showAlert(Alert.AlertType.ERROR, "Error", "Invalid username or password.");
+       Utilities.showAlert(Alert.AlertType.ERROR, "Error", "Invalid username or password.");
     }
 }
 

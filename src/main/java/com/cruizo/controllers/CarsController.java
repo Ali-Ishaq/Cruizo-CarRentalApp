@@ -99,14 +99,14 @@ public class CarsController implements Initializable {
 
         // Validate inputs
         if (make.isEmpty() || model.isEmpty() || registrationNumber.isEmpty() || priceStr.isEmpty() || category == null) {
-            App.showError("Error: All fields are required!"); //This will show a dialogue box
+            Utilities.showAlert(Alert.AlertType.ERROR, "Error", "Error: All fields are required!"); //This will show a dialogue box
             return;
         }
 
         try {
             price = Double.parseDouble(priceStr);
         } catch (NumberFormatException e) {
-            App.showError("Invalid Amount"); //This will show a dialogue box
+            Utilities.showAlert(Alert.AlertType.ERROR, "Error", "Invalid Amount"); //This will show a dialogue box
             return;
         }
 
