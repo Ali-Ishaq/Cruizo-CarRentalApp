@@ -1,32 +1,23 @@
 .fancy-button {
   /* Gradient */
 /* Rounded corners */
-    -fx-background-color: #FF8000; /* Original color */
+    -fx-background-color: #FF8000;
     
-/*    -fx-background-radius: 5;  Rounded corners */
+
    
     -fx-border-color: transparent; /* No border by default */
-    -fx-cursor: hand; /* Hand cursor *//* Shadow */
+    -fx-cursor: hand; 
 }
 
 .fancy-button:hover {
-    -fx-background-color: #FFA500; /* Slightly lighter shade */
+    -fx-background-color: #FFA500; 
    
-    -fx-scale-x: 1.05; /* Slight scaling */
+    -fx-scale-x: 1.05; 
     -fx-scale-y: 1.05;
 }
 
 .fancy-button:pressed {
-   -fx-background-color: #FF8000; /* Reverse gradient when clicked */
-    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 2); /* Pressed effect */
+   -fx-background-color: #FF8000;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.4), 10, 0, 0, 2);
 }
 
-.back-arrow-img:hover{
-    -fx-scale-x: 1.05; /* Slight scaling */
-    -fx-scale-y: 1.05; 
-}
-
-.back-arrow-img:pressed {
-    -fx-scale-x: 0.9; /* Slight scaling */
-    -fx-scale-y: 0.9;
-}

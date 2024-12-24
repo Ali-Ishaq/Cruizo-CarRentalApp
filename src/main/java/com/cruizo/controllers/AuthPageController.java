@@ -89,14 +89,7 @@ public class AuthPageController implements Initializable {
     }
 }
 
-// Utility method to show alerts
-private void showAlert(Alert.AlertType alertType, String title, String message) {
-    Alert alert = new Alert(alertType);
-    alert.setTitle(title);
-    alert.setHeaderText(null);
-    alert.setContentText(message);
-    alert.showAndWait();
-}
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
