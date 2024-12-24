@@ -2,17 +2,15 @@
     -fx-alignment: center;
     -fx-background-color: #021B24;
     -fx-border-width: 0;
-    -fx-border-radius: 20px; /* Rounds the edges of the button */
-    -fx-background-radius: 20px; /* Applies the same rounding to the background */
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px; 
     -fx-text-fill: #ffffff;
     -fx-cursor: hand;
     -fx-padding: 0 20 0 20; /* top, right, bottom, left */
     -fx-min-height: 40px;
     -fx-max-width: 480px;
     -fx-background-insets: 0;
-    -fx-transition: -fx-background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1), 
-                    -fx-box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1), 
-                    -fx-text-fill 0.167s cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 
 .customer-button:hover, .button-18:focused {

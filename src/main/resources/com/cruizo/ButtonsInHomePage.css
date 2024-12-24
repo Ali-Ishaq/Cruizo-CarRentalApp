@@ -1,11 +1,11 @@
 .button-home {
 -fx-background-color: rgba(255, 255, 255, 0.4);
     -fx-text-fill: #333;   
-    -fx-font-size: 16px; /*
-    /*-fx-padding: 10 20;  Adjust padding for larger buttons */
-    -fx-border-radius: 10; /* Rounded corners */
-    -fx-background-radius: 10; /* Match border and background radius */
-    -fx-border-color: #ace0f9; /* Optional border color */
+    -fx-font-size: 16px; 
+  
+    -fx-border-radius: 10; 
+    -fx-background-radius: 10;
+    -fx-border-color: #ace0f9; 
     -fx-border-width: 1; /* Thin border for a neat look */
 }
 
