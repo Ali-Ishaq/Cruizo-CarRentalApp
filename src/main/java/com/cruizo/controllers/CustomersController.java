@@ -88,18 +88,38 @@ public class CustomersController implements Initializable {
         String phoneNumer = phoneNumberTextField.getText();
         String licenseNumber = licenseNumberTextField.getText();
 
-        // Validate inputs
-        if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || phoneNumer.isEmpty() || licenseNumber.isEmpty()) {
        
-            Utilities.showAlert(Alert.AlertType.ERROR, "Error", "Error: All fields are required!");
+       // Validate inputs  
+    if (firstName.isEmpty() || lastName.isEmpty() || email.isEmpty() || phoneNumer.isEmpty() || licenseNumber.isEmpty()) {  
+        Utilities.showAlert(Alert.AlertType.ERROR, "Error", "Error: All fields are required!");  
+        return;  
+    }  
 
-            return;
-        }
+    // Validate first name and last name
+    if (!firstName.matches("[a-zA-Z\\s]+") || !lastName.matches("[a-zA-Z\\s]+")) {  
+        Utilities.showAlert(Alert.AlertType.ERROR, "Error", "Error: Names can only contain letters and spaces!");  
+        return;  
+    }  
+
+    // Validate phone number (Pakistani)
+    if (!phoneNumer.matches("03[0-9]{9}")) {  
+        Utilities.showAlert(Alert.AlertType.ERROR, "Error", "Error: Phone number must be a valid Pakistani number starting with 03 and 11 digits long!");  
+        return;  
+    }  
+
+    // Validate email  
+    if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {  
+        Utilities.showAlert(Alert.AlertType.ERROR, "Error", "Error: Please enter a valid email address!");  
+        return;  
+    }  
 
         Customer newCustomer=new Customer(firstName, lastName, email, phoneNumer, licenseNumber);
         CustomersData.getInstance().addUser(newCustomer);
         customerList.add(newCustomer);
-
+        Utilities.showAlert(
+    Alert.AlertType.INFORMATION, 
+    "New Customer Added", 
+    "The New Customer " + firstName + " " + lastName + " has been added in the List: ");
     }
 
     @FXML

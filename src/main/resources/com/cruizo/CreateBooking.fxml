@@ -97,7 +97,7 @@
                   <Font name="Jost Regular" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="894.0" layoutY="472.0" text="Gst (13%) : ">
+            <Label fx:id="GSTValue" layoutX="894.0" layoutY="472.0" text="GST (13%) : ">
                <font>
                   <Font name="Jost Regular" size="13.0" />
                </font>
@@ -172,6 +172,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
+            <Button fx:id="changeGST" layoutX="1000.0" layoutY="29.0" mnemonicParsing="false" onAction="#changeGST" styleClass="fancy-button" stylesheets="@fancybutton.css" text="Change GST" textFill="WHITE" />
          </children>
       </AnchorPane>
    </children>

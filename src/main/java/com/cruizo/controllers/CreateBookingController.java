@@ -36,6 +36,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
 import com.cruizo.Utilities;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 
 
@@ -88,6 +94,12 @@ public class CreateBookingController implements Initializable {
 
     @FXML
     private Label rentalDurationLable;
+    
+    @FXML
+    public Button changeGST;
+    
+    @FXML
+    public Label GSTValue;
 
     ObservableList<Customer> customersList;
     ObservableList<Car> carsList;
@@ -231,7 +243,33 @@ public class CreateBookingController implements Initializable {
         
 
     }
-    
+    // method overloaded in case of gst changing
+    private void calculateBookingAmount(String gst) {
+    if (selectedCustomer != null && selectedCar != null && rentalDurationLable.getText() != null && !(rentalDurationLable.getText().isEmpty())) {
+        try {
+            // Parse the rental duration
+           
+            // Get GST percentage as a String, e.g., "13" for 13%
+            String gstPercentageStr = gst;  // Assuming gstLabel holds the GST percentage as String
+            
+            // Convert GST String to Integer, then to Decimal (e.g., "13" -> 0.13)
+            int gstPercentage = Integer.parseInt(gstPercentageStr);
+            double gstDecimal = gstPercentage / 100.0;
+
+           Double rentalAmount=selectedCar.pricePerDay*Integer.parseInt(rentalDurationLable.getText());
+            Double totalRentalAmount=rentalAmount+(rentalAmount*gstDecimal);
+            
+            rentalAmountLabel.setText(Double.toString(rentalAmount));
+            gstLabel.setText(Double.toString(rentalAmount*gstDecimal));
+            totalAmountLabel.setText(Double.toString(totalRentalAmount));
+
+            // Store the calculated total amount
+            calculatedRentalAmount = totalRentalAmount;
+        } catch (NumberFormatException e) {
+            Utilities.showAlert(Alert.AlertType.ERROR, "Error", "Invalid number format in GST or rental duration");
+        }
+    }
+}
     private void calculateBookingAmount(){
          if (selectedCustomer!=null && selectedCar!=null && rentalDurationLable.getText()!=null && !(rentalDurationLable.getText().isEmpty()) ) {
 
@@ -276,11 +314,7 @@ public class CreateBookingController implements Initializable {
     "Your booking has been confirmed. Booking ID: " + bookingId
 );
         
-        
-//        Alert confirmationAlert = new Alert(AlertType.INFORMATION, "Your booking has been confirmed. Booking ID: " + bookingId, ButtonType.OK);
-//        confirmationAlert.setTitle("Booking Confirmation");
-//        confirmationAlert.setHeaderText("Booking Confirmed!");
-//        confirmationAlert.showAndWait();
+    
 
         // Navigate to Homepage
         switchToHomepage();
@@ -290,4 +324,44 @@ public class CreateBookingController implements Initializable {
 
     }
 }
+   @FXML
+private void changeGST(ActionEvent event) throws IOException {
+    
+   
+    try {
+        // Load the FXML file for the dialog
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/cruizo/ChangeGST.fxml"));
+        Parent root = loader.load();
+
+        // Create a new stage for the modal dialog
+        Stage dialogStage = new Stage();
+        dialogStage.setTitle("Change GST");
+        dialogStage.initModality(javafx.stage.Modality.APPLICATION_MODAL); // Set modality to block other windows
+        dialogStage.initOwner(((Stage) changeGST.getScene().getWindow())); // Set the owner of the dialog
+        
+        // Create a new scene for the dialog
+        Scene dialogScene = new Scene(root);
+        dialogStage.setScene(dialogScene);
+
+        // Access the controller to pass any required data (optional)
+        ChangeGSTController controller = loader.getController();
+//        controller.setCurrentGSTLabel(gstLabel.getText()); // Example: pass the current GST value
+
+        // Show the dialog and wait until it's closed
+        dialogStage.showAndWait();
+
+        // After closing the dialog, fetch the updated GST value if changed
+        String newGST = controller.getUpdatedGST();
+        if (newGST != null) {
+            // Update the GST label and recalculate the booking amount
+            GSTValue.setText("GST " + "(" + newGST + "%" + ") :");
+            calculateBookingAmount(newGST);
+        }
+
+    } catch (IOException e) {
+        e.printStackTrace();
+        Utilities.showAlert(Alert.AlertType.ERROR, "Error", "Failed to load ChangeGST.fxml");
+    }
+}
+
 }
